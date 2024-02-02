@@ -18,9 +18,13 @@ public class EmplSelect : MonoBehaviour
             Empolyee employeeScript = square.AddComponent<Empolyee>();
             employeeScript.SetRandomStats();
         }
+
+
     }
 
-    // 클릭된 네모를 제외한 나머지 네모 삭제
+
+
+    //클릭된 네모만 남기기
     public void OnSquareClick(GameObject clickedSquare)
     {
         GameObject[] squares = GameObject.FindGameObjectsWithTag("SelectOption");
@@ -32,4 +36,5 @@ public class EmplSelect : MonoBehaviour
             }
         }
     }
+
 }

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 986679307}
   - component: {fileID: 986679309}
   - component: {fileID: 986679308}
+  - component: {fileID: 986679310}
   m_Layer: 5
   m_Name: Square (2)
   m_TagString: SelectOption
@@ -266,6 +267,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986679304}
   m_CullTransparentMesh: 1
+--- !u!114 &986679310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986679304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1673586123}
+          m_TargetAssemblyTypeName: EmplSelect, Assembly-CSharp
+          m_MethodName: OnSquareClick
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 986679304}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1125133797
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +309,7 @@ GameObject:
   - component: {fileID: 1125133800}
   - component: {fileID: 1125133802}
   - component: {fileID: 1125133801}
+  - component: {fileID: 1125133803}
   m_Layer: 5
   m_Name: Square (1)
   m_TagString: SelectOption
@@ -409,6 +440,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125133797}
   m_CullTransparentMesh: 1
+--- !u!114 &1125133803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125133797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1673586123}
+          m_TargetAssemblyTypeName: EmplSelect, Assembly-CSharp
+          m_MethodName: OnSquareClick
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1125133797}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1673586119
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +480,7 @@ GameObject:
   - component: {fileID: 1673586122}
   - component: {fileID: 1673586121}
   - component: {fileID: 1673586120}
+  - component: {fileID: 1673586123}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -469,14 +530,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673586119}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24550347, y: -0.026154816, z: -4.482721}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.24550349, y: -0.026154816, z: -4.4827194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673586123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673586119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d2728c1cdf0624ab75691f24f3b62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949810821
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +739,7 @@ GameObject:
   - component: {fileID: 2115492764}
   - component: {fileID: 2115492766}
   - component: {fileID: 2115492765}
+  - component: {fileID: 2115492767}
   m_Layer: 5
   m_Name: Square (3)
   m_TagString: SelectOption
@@ -796,6 +870,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115492761}
   m_CullTransparentMesh: 1
+--- !u!114 &2115492767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115492761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1673586123}
+          m_TargetAssemblyTypeName: EmplSelect, Assembly-CSharp
+          m_MethodName: OnSquareClick
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2115492761}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2147382642
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +998,7 @@ RectTransform:
   - {fileID: 2115492762}
   - {fileID: 1949810822}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
