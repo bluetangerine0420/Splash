@@ -130,4 +130,15 @@ public class Empolyee : MonoBehaviour
         targetroom = room;
         Moving = true;
     }
+
+
+    public void SetRandomStats()
+    {
+        Strange = Random.Range(1, 6);
+        Intelligent = Random.Range(1, 6);
+        Luck = Random.Range(1, 6);
+        Hp = Random.Range(1, 6);
+        Mental = Random.Range(1, 6);
+    }
+
 }
