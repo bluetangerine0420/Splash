@@ -34,6 +34,7 @@ public class Empolyee : MonoBehaviour
     public GameObject Elevator;
     public Room targetroom;
     [SerializeField] GameObject[] RoomsPos;
+    [SerializeField] GameObject[] FloorPos;
 
     enum Condition
     {
@@ -96,13 +97,13 @@ public class Empolyee : MonoBehaviour
                 switch (targetroom.Floor)
                 {
                     case 1:
-                        gameObject.transform.position = new Vector2(40, -6f);
+                        gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y);
                         break;
                     case 2:
-                        gameObject.transform.position = new Vector2(40, 2.5f);
+                        gameObject.transform.position = new Vector2(40, FloorPos[1].transform.position.y);
                         break;
                     case 3:
-                        gameObject.transform.position = new Vector2(40, 11f);
+                        gameObject.transform.position = new Vector2(40, FloorPos[2].transform.position.y);
                         break;
                 }
                 this.Floor = targetroom.Floor;

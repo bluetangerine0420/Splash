@@ -2,24 +2,75 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Splash
+public class Splash : MonoBehaviour
 {
     public string Name;
 
-    float Espace_Value;
-    bool Escpae;
+    public float Espace_Value;
+    public bool Escpae;
 
-    float Grow_Value;
-    int Grow;
+    public float Grow_Value;
+    public int Grow;
 
-    int Hp;
-    int Atk;
-    int Def;
-    float Atk_Spd;
+    public int Hp;
+    public int Atk;
+    public int Def;
+    public float Move_Spd;
+    public float Cur_Atk_Spd;
+    public float Max_Atk_Spd;
 
-    float Death_Value;
+    public float Death_Value;
 
-    float Work_Time;
-    float Work_percent;
-    float Work_Spd;
+    public float Work_Time;
+    public float Work_percent;
+    public float Work_Spd;
+
+    public bool AttackReady;
+    public Collider2D AttackRange;
+
+    public void Attack()
+    {
+        if (AttackReady)
+        {
+            //attack code
+            AttackReady = false;
+        }
+        else Cur_Atk_Spd += Time.deltaTime;
+    }
+    public void Move()
+    {
+        if(!AttackReady)
+        {
+            switch(Random.Range(0,1))
+            {
+                case 0:
+                    {
+                        Vector2 movement = new Vector2(1, -0.01f) * Move_Spd * Time.deltaTime;
+                        GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+                    }
+                    break; 
+                case 1:
+                    {
+                        Vector2 movement = new Vector2(-1, -0.01f) * Move_Spd * Time.deltaTime;
+                        GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+                    }
+                    break;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Empolyee"&& Max_Atk_Spd<Cur_Atk_Spd)
+        {
+            AttackReady = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Empolyee")
+        {
+            AttackReady = false;
+        }
+    }
 }
