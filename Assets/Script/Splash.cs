@@ -30,29 +30,31 @@ public class Splash : MonoBehaviour
 
     public void Attack()
     {
-        if (AttackReady)
+        if (AttackReady && Max_Atk_Spd < Cur_Atk_Spd)
         {
             //attack code
-            AttackReady = false;
+            Cur_Atk_Spd = 0;
         }
         else Cur_Atk_Spd += Time.deltaTime;
     }
     public void Move()
     {
-        if(!AttackReady)
+        if (!AttackReady)
         {
-            switch(Random.Range(0,1))
+            switch (Random.Range(0, 1))
             {
                 case 0:
                     {
                         Vector2 movement = new Vector2(1, -0.01f) * Move_Spd * Time.deltaTime;
-                        GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+                        for (int i = 0; i < 5; i++)
+                            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
                     }
-                    break; 
+                    break;
                 case 1:
                     {
                         Vector2 movement = new Vector2(-1, -0.01f) * Move_Spd * Time.deltaTime;
-                        GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+                        for (int i = 0; i < 5; i++)
+                            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
                     }
                     break;
             }
@@ -61,7 +63,7 @@ public class Splash : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Empolyee"&& Max_Atk_Spd<Cur_Atk_Spd)
+        if (collision.gameObject.tag == "Empolyee")
         {
             AttackReady = true;
         }
