@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int Ops;
-    public int Empolyee_Num;
+    public int Employee_Num;
     public int Splash_Num;
     public static GameManager Gameinstance = null;
 

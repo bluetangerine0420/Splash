@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Empolyee : MonoBehaviour
+public class Employee : MonoBehaviour
 {
     string Name;
 

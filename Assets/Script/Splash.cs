@@ -63,14 +63,14 @@ public class Splash : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Empolyee")
+        if (collision.gameObject.tag == "Employee")
         {
             AttackReady = true;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Empolyee")
+        if (collision.gameObject.tag == "Employee")
         {
             AttackReady = false;
         }

@@ -15,7 +15,7 @@ public class EmplSelect : MonoBehaviour
         GameObject[] squares = GameObject.FindGameObjectsWithTag("SelectOption"); 
         foreach (var square in squares)
         {
-            Empolyee employeeScript = square.AddComponent<Empolyee>();
+            Employee employeeScript = square.AddComponent<Employee>();
             employeeScript.SetRandomStats();
         }
 
