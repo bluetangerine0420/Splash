@@ -5,9 +5,7 @@ using UnityEngine.EventSystems;
 
 public class UiManager : MonoBehaviour
 {   
-    public GameObject Obj;
-
-    public void UiOff()
+    public void UiOff(GameObject Obj)
     {
       Obj.SetActive(false);
     }

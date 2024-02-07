@@ -10741,10 +10741,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1811609534}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
         m_MethodName: UiOff
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 717237354}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -26249,7 +26249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96708f08c10da9f4289bf17d46e52628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj: {fileID: 0}
 --- !u!1 &1838588700
 GameObject:
   m_ObjectHideFlags: 0
