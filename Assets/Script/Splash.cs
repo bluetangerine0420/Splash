@@ -15,9 +15,12 @@ public class Splash : MonoBehaviour
     public int Hp;
     public int Atk;
     public int Def;
-    public float Move_Spd;
     public float Cur_Atk_Spd;
     public float Max_Atk_Spd;
+
+    public float Move_Spd;
+    public bool Left_Move;
+    public bool Right_Move;
 
     public float Death_Value;
 
@@ -37,42 +40,24 @@ public class Splash : MonoBehaviour
         }
         else Cur_Atk_Spd += Time.deltaTime;
     }
-    public void Move()
+    public void Move1()
     {
-        if (!AttackReady)
-        {
-            switch (Random.Range(0, 1))
-            {
-                case 0:
-                    {
-                        Vector2 movement = new Vector2(1, -0.01f) * Move_Spd * Time.deltaTime;
-                        for (int i = 0; i < 5; i++)
-                            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
-                    }
-                    break;
-                case 1:
-                    {
-                        Vector2 movement = new Vector2(-1, -0.01f) * Move_Spd * Time.deltaTime;
-                        for (int i = 0; i < 5; i++)
-                            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
-                    }
-                    break;
-            }
-        }
+        
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D()
     {
-        if (collision.gameObject.tag == "Employee")
+        if (AttackRange.gameObject.tag == "Employee")
         {
             AttackReady = true;
         }
     }
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D()
     {
-        if (collision.gameObject.tag == "Employee")
+        if (AttackRange.gameObject.tag == "Employee")
         {
             AttackReady = false;
         }
     }
+
 }
