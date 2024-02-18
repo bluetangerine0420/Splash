@@ -7,6 +7,8 @@ TagManager:
   - Room_Lock
   - Elevator
   - Emplolyee
+  - SelectOption
+  - eventPop
   layers:
   - Default
   - TransparentFX
