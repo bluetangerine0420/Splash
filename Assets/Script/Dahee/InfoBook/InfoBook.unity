@@ -2220,6 +2220,7 @@ GameObject:
   - component: {fileID: 1536315646}
   - component: {fileID: 1536315648}
   - component: {fileID: 1536315647}
+  - component: {fileID: 1536315649}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2287,6 +2288,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536315645}
   m_CullTransparentMesh: 1
+--- !u!114 &1536315649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536315645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd772db460491ad48a0373007e4c3b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1547846211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,9 +2311,7 @@ GameObject:
   - component: {fileID: 1547846212}
   - component: {fileID: 1547846216}
   - component: {fileID: 1547846215}
-  - component: {fileID: 1547846214}
   - component: {fileID: 1547846213}
-  - component: {fileID: 1547846217}
   m_Layer: 5
   m_Name: Panel
   m_TagString: eventPop
@@ -2374,19 +2385,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1547846214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547846211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d60dc181ddd5cb42ab6398eef138f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popup: {fileID: 1547846211}
 --- !u!114 &1547846215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,18 +2423,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547846211}
   m_CullTransparentMesh: 1
---- !u!114 &1547846217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547846211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd772db460491ad48a0373007e4c3b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1663370381
 GameObject:
   m_ObjectHideFlags: 0
