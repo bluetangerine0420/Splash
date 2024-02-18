@@ -13,7 +13,7 @@ public class Shark : Splash
     // Update is called once per frame
     void Update()
     {
-
+        Move();
     }
 
     void FixedUpdate()

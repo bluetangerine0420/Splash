@@ -21,6 +21,8 @@ public class Splash : MonoBehaviour
     public float Move_Spd;
     public bool Left_Move;
     public bool Right_Move;
+    public float Move_Max_Time;
+    public float Move_Cur_Time;
 
     public float Death_Value;
 
@@ -40,9 +42,28 @@ public class Splash : MonoBehaviour
         }
         else Cur_Atk_Spd += Time.deltaTime;
     }
-    public void Move1()
+    public void Move()
     {
-        
+        if (Move_Max_Time < Move_Cur_Time)
+        {
+            switch (Random.Range(0, 2))
+            {
+                case 0:
+                    {
+                        Left_Move = true;
+                        Right_Move = false;
+                        Move_Cur_Time = 0;
+                    }
+                    break;
+                case 1:{
+                        Left_Move = false;
+                        Right_Move = true;
+                        Move_Cur_Time = 0;
+                        }
+                    break;
+            }
+        }
+        else Move_Cur_Time += Time.deltaTime;
     }
 
     void OnTriggerEnter2D()

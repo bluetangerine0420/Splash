@@ -28507,9 +28507,11 @@ MonoBehaviour:
   Def: 0
   Cur_Atk_Spd: 0
   Max_Atk_Spd: 0
-  Move_Spd: 20
+  Move_Spd: 2
   Left_Move: 0
   Right_Move: 0
+  Move_Max_Time: 3
+  Move_Cur_Time: 0
   Death_Value: 0
   Work_Time: 0
   Work_percent: 0
