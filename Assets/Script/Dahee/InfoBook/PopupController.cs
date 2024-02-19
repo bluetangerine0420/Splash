@@ -9,8 +9,14 @@ public class PopupController : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.pointerCurrentRaycast.gameObject.tag == "eventPop")
+        if (popup.activeSelf && eventData.pointerCurrentRaycast.gameObject != popup)
+        {
             popup.SetActive(false);
+            SetPopLast();
+        }
+       
+        
+     
     }
 
     public void SetPopLast()

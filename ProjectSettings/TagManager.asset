@@ -9,6 +9,7 @@ TagManager:
   - Emplolyee
   - SelectOption
   - eventPop
+  - Text
   layers:
   - Default
   - TransparentFX

@@ -2,13 +2,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public float scaleFactor = 1.1f; 
+    public float scaleFactor = 1.1f;
 
     private UnityEngine.UI.Image image;
 
     private Vector3 originalScale;
+    private bool isClicked = false;
 
     private void Start()
     {
@@ -18,13 +19,22 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
-        transform.localScale = originalScale * scaleFactor;
+        if (!isClicked)
+        {
+            transform.localScale = originalScale * scaleFactor;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-       
-        transform.localScale = originalScale;
+        if (!isClicked)
+        {
+            transform.localScale = originalScale;
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        isClicked = true;
     }
 }
