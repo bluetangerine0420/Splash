@@ -48,8 +48,8 @@ public class Room : MonoBehaviour
         {
             Espace_Value += Time.deltaTime * 0.1f;
         }
-
     }
+
     public void Click()
     {
         OpenUI.SetActive(true);
