@@ -8,11 +8,11 @@ public class Employee : MonoBehaviour
 {
     string Name;
 
-    int Strange;
-    int Intelligent;
-    int Luck;
-    int Hp;
-    int Mental;
+    public int Strange { get; private set; }
+    public int Intelligent { get; private set; }
+    public int Luck { get; private set; }
+    public int Hp { get; private set; }
+    public int Mental { get; private set; }
 
     float Atk_Spd;
 
@@ -135,10 +135,23 @@ public class Employee : MonoBehaviour
     public void SetRandomStats()
     {
         Strange = Random.Range(1, 6);
-        Intelligent = Random.Range(1, 6);
         Luck = Random.Range(1, 6);
         Hp = Random.Range(1, 6);
         Mental = Random.Range(1, 6);
+        Intelligent = Random.Range(1, 6);
+
+        UpdateEmployeeStats();
     }
+
+
+    void UpdateEmployeeStats()
+    {
+        EmplSelect emplSelect = FindObjectOfType<EmplSelect>();
+        if (emplSelect != null)
+        {
+            emplSelect.UpdateStatsText(Strange, Intelligent, Luck, Hp, Mental);
+        }
+    }
+
 
 }

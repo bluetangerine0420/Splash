@@ -13,6 +13,15 @@ public class EmplSelect : MonoBehaviour
     private Transform selectedSquare;
     public Characters charactersScript;
 
+    public UnityEngine.UI.Text strangeText;
+    public UnityEngine.UI.Text intelligentText;
+    public UnityEngine.UI.Text luckText;
+    public UnityEngine.UI.Text hpText;
+    public UnityEngine.UI.Text mentalText;
+
+    public Employee employee;
+
+
     void Start()
     {
         //각 네모에 employee 스크립트 부여 및 변수 초기화
@@ -21,9 +30,27 @@ public class EmplSelect : MonoBehaviour
         {
             Employee employeeScript = square.AddComponent<Employee>();
             employeeScript.SetRandomStats();
+
+            if (square.activeSelf)
+            {
+                employee = employeeScript;
+                UpdateStatsText(employee.Strange, employee.Intelligent, employee.Luck, employee.Hp, employee.Mental);
+            }
+
+            
         }
 
+
   
+    }
+
+    public void UpdateStatsText(int strange, int intelligent, int luck, int hp, int mental)
+    {
+        strangeText.text = "Strange: " + strange.ToString();
+        intelligentText.text = "Intelligent: " + intelligent.ToString();
+        luckText.text = "Luck: " + luck.ToString();
+        hpText.text = "HP: " + hp.ToString();
+        mentalText.text = "Mental: " + mental.ToString();
     }
 
     //클릭된 네모만 남기기
@@ -65,7 +92,10 @@ public class EmplSelect : MonoBehaviour
         isMoving = false;
 
         charactersScript.ChangeSpriteWithFade();
-        
+
+    
+      
+
 
     }
 
