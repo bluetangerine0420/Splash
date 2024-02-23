@@ -7,120 +7,59 @@ using UnityEngine.UIElements;
 
 public class Room : MonoBehaviour
 {
-    public bool Open;
-    bool Now_Click = false;
 
     public int Floor;
     public int Room_Num;
-    public int Room_Lv;
 
     public Sprite[] Room_Speites;
     SpriteRenderer RoomRenderer;
 
     public GameObject OpenUI;
-    public TextMeshProUGUI Open_text;
+
+    public Splash CareSplash;
 
     public Vector3 RoomPosition;
 
-    enum Room_Type
-    {
-        Cage,
-        Hospital,
-        Library,
-        Restroom,
-        Factory,
-        None
-    }
-    Room_Type Room_Now = Room_Type.None;
 
+    public float Espace_Value;
+    public bool Escpae;
+
+    public float Work_Time;
+    public float Work_percent;
+    public float Work_Spd;
 
     void Awake()
     {
         RoomRenderer = GetComponent<SpriteRenderer>();
-
+        RoomPosition = this.transform.position;
     }
     void Start()
     {
-     RoomPosition=this.transform.position;
+
     }
     void Update()
     {
 
     }
 
+    public void Care()
+    {
+        if (CareSplash != null)
+        {
+            Espace_Value += Time.deltaTime * 0.1f;
+        }
+    }
+
+    public void Click()
+    {
+        OpenUI.SetActive(true);
+    }
 
     void OnMouseOver()
     {
         Click();
-        //Room_Setting();
     }
 
 
-    public void Click()
-    {
-        if (!Now_Click && Input.GetMouseButtonDown(0))
-        {
-            Room_Ui_Open();
-            Now_Click = true;
-        }
-
-        else if (Now_Click && Input.GetMouseButtonUp(0))
-        {
-            Now_Click = false;
-        }
-
-    }
-
-    void Room_Setting()
-    {
-        if (Open)
-        {
-            switch (Room_Now)
-            {
-                case Room_Type.Cage:
-                    RoomRenderer.sprite = Room_Speites[0];
-                    break;
-
-                case Room_Type.Hospital:
-                    RoomRenderer.sprite = Room_Speites[1];
-                    break;
-
-                case Room_Type.Library:
-                    RoomRenderer.sprite = Room_Speites[2];
-                    break;
-
-                case Room_Type.Restroom:
-                    RoomRenderer.sprite = Room_Speites[3];
-                    break;
-
-                case Room_Type.Factory:
-                    RoomRenderer.sprite = Room_Speites[4];
-                    break;
-                case Room_Type.None:
-                    RoomRenderer.sprite = Room_Speites[5];
-                    break;
-                default: break;
-            }
-        }
-        else if (!Open)
-        {
-            RoomRenderer.sprite = Room_Speites[6];
-        }
-    }
-
-    public void Room_Open()
-    {
-        if (!Open && GameManager.Gameinstance.Ops > 100)
-        {
-            Open = true;
-            GameManager.Gameinstance.Ops -= 100;
-        }
-    }
-
-    public void Room_Ui_Open()
-    {
-        if (!Open)
-        OpenUI.SetActive(true);
-    }
 
 }

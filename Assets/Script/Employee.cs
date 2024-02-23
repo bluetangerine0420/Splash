@@ -125,12 +125,12 @@ public class Employee : MonoBehaviour
         }
 
     }
+
     public void MoveCheck(Room room)
     {
         targetroom = room;
         Moving = true;
     }
-
 
     public void SetRandomStats()
     {

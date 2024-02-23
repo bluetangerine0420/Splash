@@ -6,11 +6,10 @@ public class Splash : MonoBehaviour
 {
     public string Name;
 
-    public float Espace_Value;
-    public bool Escpae;
-
     public float Grow_Value;
     public int Grow;
+
+    public bool Escpae;
 
     public int Hp;
     public int Atk;
@@ -21,14 +20,13 @@ public class Splash : MonoBehaviour
     public float Move_Spd;
     public bool Left_Move;
     public bool Right_Move;
+
     public float Move_Max_Time;
     public float Move_Cur_Time;
 
     public float Death_Value;
 
-    public float Work_Time;
-    public float Work_percent;
-    public float Work_Spd;
+
 
     public bool AttackReady;
     public Collider2D AttackRange;
@@ -42,6 +40,7 @@ public class Splash : MonoBehaviour
         }
         else Cur_Atk_Spd += Time.deltaTime;
     }
+
     public void Move()
     {
         if (Move_Max_Time < Move_Cur_Time)
@@ -66,16 +65,25 @@ public class Splash : MonoBehaviour
         else Move_Cur_Time += Time.deltaTime;
     }
 
-    void OnTriggerEnter2D()
+    public void Care()
     {
-        if (AttackRange.gameObject.tag == "Employee")
+        Grow_Value += Time.deltaTime * 0.1f;
+        if (Grow_Value >= 100)
+        {
+            Grow_Value = 0;
+            Grow += 1;
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Employee")
         {
             AttackReady = true;
         }
     }
-    void OnTriggerExit2D()
+    public void OnTriggerExit2D(Collider2D collision)
     {
-        if (AttackRange.gameObject.tag == "Employee")
+        if (collision.gameObject.tag == "Employee")
         {
             AttackReady = false;
         }
