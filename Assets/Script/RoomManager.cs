@@ -7,7 +7,6 @@ public class RoomManager : MonoBehaviour
 {
     bool Open;
 
-
     public Sprite[] Room_Speites;
     SpriteRenderer RoomRenderer;
 
