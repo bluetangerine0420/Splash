@@ -11,6 +11,7 @@ public class EmplSelect : MonoBehaviour
     private bool isMoving = false;
 
     private Transform selectedSquare;
+    public Characters charactersScript;
 
     void Start()
     {
@@ -62,6 +63,9 @@ public class EmplSelect : MonoBehaviour
             yield return null;
         }
         isMoving = false;
+
+        charactersScript.ChangeSpriteWithFade();
+        
 
     }
 
