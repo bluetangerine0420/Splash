@@ -10,4 +10,5 @@ public class UiManager : MonoBehaviour
       Obj.SetActive(false);
     }
 
+    
 }
