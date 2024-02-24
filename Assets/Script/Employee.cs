@@ -8,19 +8,13 @@ public class Employee : MonoBehaviour
 {
     string Name;
 
-<<<<<<< Updated upstream
-    public int Strange { get; private set; }
-    public int Intelligent { get; private set; }
+
+    public int Atk { get; private set; }
+    public int Int { get; private set; }
     public int Luck { get; private set; }
     public int Hp { get; private set; }
     public int Mental { get; private set; }
-=======
-    int Atk;
-    int Int;
-    int Luck;
-    int Hp;
-    int Mental;
->>>>>>> Stashed changes
+
 
     float Atk_Spd;
 
@@ -142,16 +136,11 @@ public class Employee : MonoBehaviour
 
     public void SetRandomStats()
     {
-<<<<<<< Updated upstream
-        Strange = Random.Range(1, 6);
-=======
         Atk = Random.Range(1, 6);
-        Int = Random.Range(1, 6);
->>>>>>> Stashed changes
         Luck = Random.Range(1, 6);
         Hp = Random.Range(1, 6);
         Mental = Random.Range(1, 6);
-        Intelligent = Random.Range(1, 6);
+        Int = Random.Range(1, 6);
 
         UpdateEmployeeStats();
     }
@@ -162,7 +151,7 @@ public class Employee : MonoBehaviour
         EmplSelect emplSelect = FindObjectOfType<EmplSelect>();
         if (emplSelect != null)
         {
-            emplSelect.UpdateStatsText(Strange, Intelligent, Luck, Hp, Mental);
+            emplSelect.UpdateStatsText(Atk, Int, Luck, Hp, Mental);
         }
     }
 

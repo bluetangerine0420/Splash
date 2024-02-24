@@ -34,7 +34,7 @@ public class EmplSelect : MonoBehaviour
             if (square.activeSelf)
             {
                 employee = employeeScript;
-                UpdateStatsText(employee.Strange, employee.Intelligent, employee.Luck, employee.Hp, employee.Mental);
+                UpdateStatsText(employee.Atk, employee.Int, employee.Luck, employee.Hp, employee.Mental);
             }
 
             
