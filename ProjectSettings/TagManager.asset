@@ -11,6 +11,7 @@ TagManager:
   - eventPop
   - Text
   - Employee
+  - Music
   layers:
   - Default
   - TransparentFX
