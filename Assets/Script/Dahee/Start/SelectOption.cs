@@ -13,6 +13,9 @@ public class MovePhone : MonoBehaviour
     private float startTime;
     private int targetIndex = 0;
 
+    public GameObject objectToActivate;
+
+
     void Start()
     {
         startPosition = transform.position;
@@ -24,7 +27,7 @@ public class MovePhone : MonoBehaviour
         switch (targetIndex)
         {
             case 0:
-                if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
                 {
                     SceneManager.LoadScene("SampleScene");
                 }
@@ -38,7 +41,9 @@ public class MovePhone : MonoBehaviour
             default:
                 if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
                 {
-                    SceneManager.LoadScene("Menu");
+                         
+                    ActivateObject();
+                    
                 }
                 break;
         }
@@ -62,6 +67,12 @@ public class MovePhone : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             MoveToPreviousPosition();
+        }
+
+      
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            objectToActivate.SetActive(false);
         }
     }
 
@@ -97,7 +108,8 @@ public class MovePhone : MonoBehaviour
         }
     }
 
-
-   
-
+    public void ActivateObject()
+    {
+        objectToActivate.SetActive(true);
+    }
 }
