@@ -1,11 +1,27 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Research : MonoBehaviour
 {
+    class DNAnode
+    {
+        public int Ray;
+        public int Starfish;
+        public int snail;
+        public int Walrus;
+        public int Whale;
+        public int Eel;
+        public int Shark;
+        public int Turtle;
+        public int Monkfish;
+        public int Crayfish;
+    }
+    GameObject[] ResearchUi;
     DNAnode[] Nodes;
     GameObject[] SplashUi;
     int Cur_Node_Num = 0;
@@ -17,47 +33,13 @@ public class Research : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        NodeSum();
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (Node_Check())
-        {
-            case "Ray":
-                SplashUi[0].SetActive(true);
-                break;
-            case "Starfish":
-                SplashUi[1].SetActive(true);
-                break;
-            case "Snail":
-                SplashUi[2].SetActive(true);
-                break;
-            case "Walrus": 
-                SplashUi[3].SetActive(true);
-                break;
-            case "Whale": 
-                SplashUi[4].SetActive(true);
-                break;
-            case "Eel":
-                SplashUi[5].SetActive(true);
-                break;
-            case "Shark":
-                SplashUi[6].SetActive(true);
-                break;
-            case "Turtle": 
-                SplashUi[7].SetActive(true);
-                break;
-            case "Monkfish": 
-                SplashUi[8].SetActive(true);
-                break;
-            case "Crayfish": 
-                SplashUi[9].SetActive(true);
-                break;
-            default: break;
-        }
-       
+
     }
 
     void InNode(DNAnode NowNode)
@@ -66,20 +48,35 @@ public class Research : MonoBehaviour
         Cur_Node_Num++;
     }
 
-    string Node_Check()
+    int NodeSum()
     {
         if (Cur_Node_Num == 3)
         {
-            Sums[] NodeValue_Sum = new Sums[10];
-            for (int i = 0; i < 10; i++)
+            int[] SumValue = new int[10];
+            for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < 3; j++)
-                {
-                    NodeValue_Sum[i].NodeValue = Nodes[j].NodeValue[i];
-                }
+                SumValue[0] += Nodes[i].Ray;
+                SumValue[1] += Nodes[i].Starfish;
+                SumValue[2] += Nodes[i].snail;
+                SumValue[3] += Nodes[i].Walrus;
+                SumValue[4] += Nodes[i].Whale;
+                SumValue[5] += Nodes[i].Eel;
+                SumValue[6] += Nodes[i].Shark;
+                SumValue[7] += Nodes[i].Turtle;
+                SumValue[8] += Nodes[i].Monkfish;
+                SumValue[9] += Nodes[i].Crayfish;
             }
-            return NodeValue_Sum.Max().Name;
+            int max = SumValue[0];
+            int count = 1;
+            for (int i = 1; i < 10; i++)
+            {
+                if (max < SumValue[i])
+                    count++;
+            }
+            ResearchUi[count].SetActive(true);
         }
-        return "";
+        return 0;
     }
+
+    
 }
