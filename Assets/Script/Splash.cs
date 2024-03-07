@@ -6,14 +6,12 @@ public class Splash : MonoBehaviour
 {
     public string Name;
 
-    public float Grow_Value;
-    public int Grow;
+
 
     public bool Escpae;
 
     public int Hp;
     public int Atk;
-    public int Def;
     public float Cur_Atk_Spd;
     public float Max_Atk_Spd;
 
@@ -65,15 +63,7 @@ public class Splash : MonoBehaviour
         else Move_Cur_Time += Time.deltaTime;
     }
 
-    public void Care()
-    {
-        Grow_Value += Time.deltaTime * 0.1f;
-        if (Grow_Value >= 100)
-        {
-            Grow_Value = 0;
-            Grow += 1;
-        }
-    }
+   
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Employee")

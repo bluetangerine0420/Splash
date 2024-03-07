@@ -16,13 +16,16 @@ public class Room : MonoBehaviour
 
     public GameObject OpenUI;
 
-    public Splash CareSplash;
+    public bool CareSplash;
 
     public Vector3 RoomPosition;
 
 
     public float Espace_Value;
     public bool Escpae;
+
+    public float Grow_Value;
+    public int Grow;
 
     public float Work_Time;
     public float Work_percent;
@@ -42,13 +45,7 @@ public class Room : MonoBehaviour
 
     }
 
-    public void Care()
-    {
-        if (CareSplash != null)
-        {
-            Espace_Value += Time.deltaTime * 0.1f;
-        }
-    }
+
 
     public void Click()
     {
@@ -59,7 +56,4 @@ public class Room : MonoBehaviour
     {
         Click();
     }
-
-
-
 }

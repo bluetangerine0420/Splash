@@ -34,7 +34,9 @@ public class Employee : MonoBehaviour
 
 
     public GameObject Elevator;
+
     public Room targetroom;
+
     [SerializeField] GameObject[] RoomsPos;
     [SerializeField] GameObject[] FloorPos;
 
@@ -61,6 +63,7 @@ public class Employee : MonoBehaviour
         if (Moving)
             MoveRoom();
     }
+
     void FixedUpdate()
     {
         if (RightMoving)
@@ -74,6 +77,7 @@ public class Employee : MonoBehaviour
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
         }
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Elevator")
@@ -128,12 +132,13 @@ public class Employee : MonoBehaviour
 
     }
 
-    public void MoveCheck(Room room)
+    void Care()
     {
-        targetroom = room;
-        Moving = true;
+        if (targetroom.CareSplash) { 
+            MoveRoom();
+            
+        }
     }
-
     public void SetRandomStats()
     {
         Atk = Random.Range(1, 6);
