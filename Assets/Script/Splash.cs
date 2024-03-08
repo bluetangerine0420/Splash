@@ -29,7 +29,7 @@ public class Splash : MonoBehaviour
     public bool AttackReady;
     public Collider2D AttackRange;
 
-    public SpriteRenderer splash;
+    public SpriteRenderer splashRenderer;
 
     
 
@@ -51,14 +51,14 @@ public class Splash : MonoBehaviour
             {
                 case 0:
                     {
-                        splash.flipX = false;
+                        splashRenderer.flipX = false;
                         Left_Move = true;
                         Right_Move = false;
                         Move_Cur_Time = 0;
                     }
                     break;
                 case 1:{
-                        splash.flipX = true;
+                        splashRenderer.flipX = true;
                         Left_Move = false;
                         Right_Move = true;
                         Move_Cur_Time = 0;
