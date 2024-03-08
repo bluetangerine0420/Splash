@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Shark : Splash
 {
-    // Start is called before the first frame update
+  
+
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -20,13 +21,18 @@ public class Shark : Splash
     {
         if (Right_Move)
         {
+            
             Vector2 movement = new Vector2(1, -0.01f) * Move_Spd * Time.deltaTime;
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+        
         }
         else if(Left_Move)
         {
+           
             Vector2 movement = new Vector2(-1, -0.01f) * Move_Spd * Time.deltaTime;
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
+
+           
         }
     }
 }

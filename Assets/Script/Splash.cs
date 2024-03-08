@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Splash : MonoBehaviour
 {
+    
     public string Name;
-
 
 
     public bool Escpae;
@@ -29,6 +29,10 @@ public class Splash : MonoBehaviour
     public bool AttackReady;
     public Collider2D AttackRange;
 
+    public SpriteRenderer splash;
+
+    
+
     public void Attack()
     {
         if (AttackReady && Max_Atk_Spd < Cur_Atk_Spd)
@@ -47,12 +51,14 @@ public class Splash : MonoBehaviour
             {
                 case 0:
                     {
+                        splash.flipX = false;
                         Left_Move = true;
                         Right_Move = false;
                         Move_Cur_Time = 0;
                     }
                     break;
                 case 1:{
+                        splash.flipX = true;
                         Left_Move = false;
                         Right_Move = true;
                         Move_Cur_Time = 0;

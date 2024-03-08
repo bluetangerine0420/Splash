@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 6513387887674810247, guid: 35b00d05ce048a040986410152a686e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1480,7 +1484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8524459177584434500, guid: 43920389c1f2dcb458b878cbe3fbea1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9149887389467587062, guid: 43920389c1f2dcb458b878cbe3fbea1e, type: 3}
       propertyPath: m_AnchorMax.x

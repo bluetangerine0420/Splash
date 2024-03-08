@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MovePhone : MonoBehaviour
+public class SelectOption : MonoBehaviour
 {
     public Transform[] targetPositions;
     public float moveSpeed = 2.0f;
