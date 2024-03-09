@@ -16,14 +16,5 @@ public class RoomUi : MonoBehaviour
         
     }
 
-    void ButtonSetting()
-    {
-        switch (GameManager.Gameinstance.Employee_Num)
-        {
-            case 0: 
-                break; 
-            case 1: 
-                break;
-        }
-    } 
+    
 }

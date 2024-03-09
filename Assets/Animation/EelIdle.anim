@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SharkIdle
+  m_Name: EelIdle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -557420966, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
+      value: {fileID: 1339253026, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
     - time: 0.083333336
-      value: {fileID: -1116111260, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
+      value: {fileID: 1787786278, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
     - time: 0.16666667
-      value: {fileID: -2047073407, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
+      value: {fileID: 145342712, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
     - time: 0.25
-      value: {fileID: 67845076, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
+      value: {fileID: -2124580105, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -557420966, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
-    - {fileID: -1116111260, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
-    - {fileID: -2047073407, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
-    - {fileID: 67845076, guid: c193565f48745844ca30d1d8df6cf41e, type: 3}
+    - {fileID: 1339253026, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
+    - {fileID: 1787786278, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
+    - {fileID: 145342712, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
+    - {fileID: -2124580105, guid: ec592ecfbd406fc4fa5fd679974cc64a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
