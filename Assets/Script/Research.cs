@@ -25,6 +25,7 @@ public class Research : MonoBehaviour
     DNAnode[] Nodes;
     GameObject[] SplashUi;
     int Cur_Node_Num = 0;
+    [SerializeField] Room[] rooms;
     struct Sums
     {
         public int NodeValue;
@@ -33,13 +34,13 @@ public class Research : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NodeSum();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        NodeSum();
     }
 
     void InNode(DNAnode NowNode)
@@ -73,10 +74,13 @@ public class Research : MonoBehaviour
                 if (max < SumValue[i])
                     count++;
             }
-            ResearchUi[count].SetActive(true);
+
+            rooms[GameManager.Gameinstance.Room_Num].CareSplash = true;
+            rooms[GameManager.Gameinstance.Room_Num].Splashes[count].SetActive(true);
+
         }
         return 0;
     }
 
-    
+
 }

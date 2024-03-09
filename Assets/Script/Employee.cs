@@ -28,6 +28,8 @@ public class Employee : MonoBehaviour
     [SerializeField] bool RightMoving = false;
     [SerializeField] bool OnElevator;
     [SerializeField] bool Moving = false;
+    [SerializeField] bool Caring = false;
+    [SerializeField] int Care_Value;
 
     int Lv;
     int Exp;
@@ -62,6 +64,8 @@ public class Employee : MonoBehaviour
     {
         if (Moving)
             MoveRoom();
+        if (Caring)
+            StartCoroutine(Care());
     }
 
     void FixedUpdate()
@@ -128,16 +132,19 @@ public class Employee : MonoBehaviour
             RightMoving = false;
             LeftMoving = false;
             Moving = false;
+            if(!targetroom.CareSplash)
+            Caring = true;
         }
-
+        
     }
 
-    void Care()
+    IEnumerator Care()
     {
-        if (targetroom.CareSplash) { 
-            MoveRoom();
-            
-        }
+        Caring = false;
+        yield return new WaitForSeconds(2.0f);
+        if (targetroom.Espace_Value - Care_Value > 0)
+            targetroom.Espace_Value -= Care_Value;
+        else targetroom.Espace_Value = 0;
     }
     public void SetRandomStats()
     {

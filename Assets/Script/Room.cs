@@ -17,6 +17,7 @@ public class Room : MonoBehaviour
     public GameObject OpenUI;
 
     public bool CareSplash;
+    public GameObject[] Splashes;
 
     public Vector3 RoomPosition;
 
