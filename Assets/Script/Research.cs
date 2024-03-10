@@ -74,10 +74,8 @@ public class Research : MonoBehaviour
                 if (max < SumValue[i])
                     count++;
             }
-
             rooms[GameManager.Gameinstance.Room_Num].CareSplash = true;
             rooms[GameManager.Gameinstance.Room_Num].Splashes[count].SetActive(true);
-
         }
         return 0;
     }

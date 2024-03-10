@@ -43,15 +43,6 @@ public class Employee : MonoBehaviour
     [SerializeField] GameObject[] RoomsPos;
     [SerializeField] GameObject[] FloorPos;
 
-    enum Condition
-    {
-
-    }
-    enum Characteristic
-    {
-
-    }
-
     Item[] Item_list = new Item[3];
 
 
@@ -147,6 +138,7 @@ public class Employee : MonoBehaviour
             targetroom.Espace_Value -= Care_Value;
         else targetroom.Espace_Value = 0;
     }
+
     public void SetRandomStats()
     {
         Atk = Random.Range(1, 6);
