@@ -12,6 +12,7 @@ TagManager:
   - Text
   - Employee
   - Music
+  - Splash
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Employee : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class Employee : MonoBehaviour
 
     void Start()
     {
-
+        Mental = 100;
     }
 
     void Update()
@@ -166,6 +167,21 @@ public class Employee : MonoBehaviour
             emplSelect.UpdateStatsText(Atk, Int, Luck, Hp, Mental);
         }
     }
+
+
+    public void RecoverMental(int amount)
+    {
+        Mental += amount;
+        Debug.Log("Recovered Mental: " + Mental);
+    }
+
+    public void DecreaseMental(float amount)
+    {
+        Mental -= (int)amount;
+        Debug.Log("Decreased Mental: " + Mental);
+    }
+
+
 
 
 }

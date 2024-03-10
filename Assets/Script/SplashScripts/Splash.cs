@@ -8,7 +8,7 @@ public class Splash : MonoBehaviour
     public string Name;
 
 
-    public bool Escpae;
+    public bool Escape = false;
 
     public int Hp;
     public int Atk;
@@ -23,6 +23,7 @@ public class Splash : MonoBehaviour
     public float Move_Cur_Time;
 
     public float Death_Value;
+    public float Escape_Value;
 
 
 
