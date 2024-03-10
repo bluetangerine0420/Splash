@@ -14,7 +14,7 @@ public class Starfish : Splash
 
     void Start()
     {
-        animator.SetBool("Escape", false);
+        //animator.SetBool("Escape", false);
     }
 
     void Update()
@@ -31,11 +31,11 @@ public class Starfish : Splash
         }
         if (Escape)
         {
-            animator.SetBool("Escape", true);
+            //animator.SetBool("Escape", true);
         }
         if (!Escape)
         {
-            animator.SetBool("Escape", false);
+            //animator.SetBool("Escape", false);
         }
     }
 
