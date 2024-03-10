@@ -10560,6 +10560,7 @@ MonoBehaviour:
   AttackReady: 0
   AttackRange: {fileID: 1662146002}
   splashRenderer: {fileID: 382416993}
+  animator: {fileID: 382416988}
 --- !u!1001 &404274957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10949,6 +10950,7 @@ MonoBehaviour:
   AttackReady: 0
   AttackRange: {fileID: 1661759043}
   splashRenderer: {fileID: 442204366}
+  animator: {fileID: 442204367}
 --- !u!1 &442565802
 GameObject:
   m_ObjectHideFlags: 0
@@ -12560,6 +12562,7 @@ MonoBehaviour:
   AttackReady: 0
   AttackRange: {fileID: 1323966167}
   splashRenderer: {fileID: 768885680}
+  animator: {fileID: 768885681}
 --- !u!1 &802315019
 GameObject:
   m_ObjectHideFlags: 0
@@ -27954,6 +27957,7 @@ MonoBehaviour:
   AttackRange: {fileID: 1859533672}
   splashRenderer: {fileID: 1391132864}
   rangeCollider: {fileID: 1859533672}
+  animator: {fileID: 1391132859}
   isEscaped: 0
 --- !u!1 &1402073335
 GameObject:
@@ -28614,6 +28618,7 @@ MonoBehaviour:
   AttackReady: 0
   AttackRange: {fileID: 989104375}
   splashRenderer: {fileID: 1569360538}
+  animator: {fileID: 1569360540}
 --- !u!212 &1569360538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30566,6 +30571,7 @@ MonoBehaviour:
   AttackReady: 0
   AttackRange: {fileID: 346639589}
   splashRenderer: {fileID: 1868380267}
+  animator: {fileID: 1868380262}
 --- !u!1 &1877986286
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class Shark : Splash
 {
-  
+    public Animator animator;
+
 
     void Start()
     {
-      
+        animator.SetBool("Escape", false);
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
+        }
     }
 
     void FixedUpdate()

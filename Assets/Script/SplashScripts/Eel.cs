@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 public class Eel : Splash
 {
     private bool wasEscape = false;
+    public Animator animator;
 
     void Start()
     {
-      
+        animator.SetBool("Escape", false);
     }
 
     // Update is called once per frame
@@ -32,6 +33,15 @@ public class Eel : Splash
             CancelInvoke("Decrease");
            
 
+        }
+
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
         }
     }
 

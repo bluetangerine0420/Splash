@@ -4,10 +4,10 @@ using UnityEngine;
 public class Crotch : Splash
 {
 
-
+    public Animator animator;
     void Start()
     {
-
+        animator.SetBool("Escape", false);
     }
 
     // Update is called once per frame
@@ -18,6 +18,15 @@ public class Crotch : Splash
         if (Escape)
         {
             EscapeAct();
+        }
+
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
         }
     }
 

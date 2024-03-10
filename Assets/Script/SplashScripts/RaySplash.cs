@@ -6,9 +6,11 @@ public class Raysplash : Splash
 {
     private bool isAngel = false;
     private bool wasEscape = false;
+    public Animator animator;
 
     void Start()
     {
+        animator.SetBool("Escape", false);
 
     }
 
@@ -23,6 +25,14 @@ public class Raysplash : Splash
                 EscapeAct();
                 wasEscape = Escape;
             }
+        }
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
         }
 
         if (!Escape)
@@ -58,11 +68,13 @@ public class Raysplash : Splash
         isAngel = Random.value > 0.5f;
         if (isAngel)
         {
+            animator.SetBool("Angel", true);
             InvokeRepeating("AngelRecovery", 0f, 5f);
             Invoke("BecomeDevil", 300f);
         }
         else
         {
+            animator.SetBool("Angel", false);
             InvokeRepeating("DevilDecrease", 0f, 10f);
         }
     }
@@ -89,6 +101,7 @@ public class Raysplash : Splash
     {
         if (!Escape)
         {
+
             CancelInvoke("DevilDecrease");
             return;
         }
@@ -110,6 +123,7 @@ public class Raysplash : Splash
 
         CancelInvoke("AngelRecovery");
         CancelInvoke("DevilDecrease");
+        animator.SetBool("Angel",false);
         InvokeRepeating("DevilDecrease", 0f, 10f);
     }
 }

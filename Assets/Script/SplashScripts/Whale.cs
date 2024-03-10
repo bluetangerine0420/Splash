@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Whale : Splash
 {
-    private bool hasEscaped = false; 
+    private bool hasEscaped = false;
+    public Animator animator;
 
     void Start()
     {
-
+        animator.SetBool("Escape", false);
     }
 
     // Update is called once per frame
@@ -20,6 +22,14 @@ public class Whale : Splash
         {
             EscapeAct();
             hasEscaped = true; 
+        }
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
         }
     }
 

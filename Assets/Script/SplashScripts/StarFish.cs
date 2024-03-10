@@ -9,11 +9,12 @@ public class Starfish : Splash
 
     public Collider2D rangeCollider;
     private Employee collidedEmployee;
+    public Animator animator;
     public bool isEscaped = false;
 
     void Start()
     {
-
+        animator.SetBool("Escape", false);
     }
 
     void Update()
@@ -27,6 +28,14 @@ public class Starfish : Splash
                 isEscaped = false;
                  
             }
+        }
+        if (Escape)
+        {
+            animator.SetBool("Escape", true);
+        }
+        if (!Escape)
+        {
+            animator.SetBool("Escape", false);
         }
     }
 
