@@ -70,7 +70,6 @@ public class Splash : MonoBehaviour
         else Move_Cur_Time += Time.deltaTime;
     }
 
-   
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Employee")
@@ -78,6 +77,7 @@ public class Splash : MonoBehaviour
             AttackReady = true;
         }
     }
+
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Employee")
@@ -85,5 +85,4 @@ public class Splash : MonoBehaviour
             AttackReady = false;
         }
     }
-
 }

@@ -168,7 +168,7 @@ public class Employee : MonoBehaviour
         Debug.Log("Recovered Mental: " + Mental);
     }
 
-    public void DecreaseMental(float amount)
+    public void DecreaseMental(float amount) 
     {
         Mental -= (int)amount;
         Debug.Log("Decreased Mental: " + Mental);
@@ -179,8 +179,5 @@ public class Employee : MonoBehaviour
         Hp -= (int)amount;
         Debug.Log("Decreased Hp: " + Hp);
     }
-
-
-
 
 }

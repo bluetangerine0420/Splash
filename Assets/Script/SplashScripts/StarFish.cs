@@ -5,7 +5,7 @@ using UnityEngine;
 public class Starfish : Splash
 {
     private Dictionary<Employee, float> slowedEmployee = new Dictionary<Employee, float>();
-  
+
 
     public Collider2D rangeCollider;
     private Employee collidedEmployee;
@@ -22,11 +22,11 @@ public class Starfish : Splash
         Move();
         if (!Escape)
         {
-            if(isEscaped)
+            if (isEscaped)
             {
                 collidedEmployee.Speed *= 2;
                 isEscaped = false;
-                 
+
             }
         }
         if (Escape)
@@ -64,7 +64,7 @@ public class Starfish : Splash
                 collidedEmployee = employeeScript;
                 employeeScript.Speed /= 2;
                 isEscaped = true;
-}
+            }
         }
     }
 
@@ -77,11 +77,8 @@ public class Starfish : Splash
             {
                 employeeScript.Speed = slowedEmployee[employeeScript];
                 slowedEmployee.Remove(employeeScript);
-                collidedEmployee = null; 
+                collidedEmployee = null;
             }
         }
     }
-
-
-
 }

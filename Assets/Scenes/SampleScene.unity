@@ -10320,22 +10320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bea5197f23344499c51a269bdd8893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Escape: 0
-  Hp: 0
-  Atk: 0
-  Cur_Atk_Spd: 0
-  Max_Atk_Spd: 0
-  Move_Spd: 2
-  Left_Move: 0
-  Right_Move: 0
-  Move_Max_Time: 3
-  Move_Cur_Time: 0
-  Death_Value: 0
-  Escape_Value: 0
-  AttackReady: 0
-  AttackRange: {fileID: 1745129098}
-  splashRenderer: {fileID: 359931023}
 --- !u!1 &382416986
 GameObject:
   m_ObjectHideFlags: 0
@@ -13441,22 +13425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd489081358a31a4eb89c8ade5c12b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Escape: 0
-  Hp: 0
-  Atk: 0
-  Cur_Atk_Spd: 0
-  Max_Atk_Spd: 0
-  Move_Spd: 2
-  Left_Move: 0
-  Right_Move: 0
-  Move_Max_Time: 3
-  Move_Cur_Time: 0
-  Death_Value: 0
-  Escape_Value: 0
-  AttackReady: 0
-  AttackRange: {fileID: 1747818424}
-  splashRenderer: {fileID: 921263515}
 --- !u!1 &957172308
 GameObject:
   m_ObjectHideFlags: 0
@@ -13777,22 +13745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a03845ac0a9bf4a9d582e4c00c6811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Escape: 0
-  Hp: 0
-  Atk: 0
-  Cur_Atk_Spd: 0
-  Max_Atk_Spd: 0
-  Move_Spd: 2
-  Left_Move: 0
-  Right_Move: 0
-  Move_Max_Time: 3
-  Move_Cur_Time: 0
-  Death_Value: 0
-  Escape_Value: 0
-  AttackReady: 0
-  AttackRange: {fileID: 909565304}
-  splashRenderer: {fileID: 1002175742}
 --- !u!1 &1022020436
 GameObject:
   m_ObjectHideFlags: 0
@@ -27941,7 +27893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  Escape: 0
+  Escape: 1
   Hp: 0
   Atk: 0
   Cur_Atk_Spd: 0
@@ -28603,7 +28555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  Escape: 0
+  Escape: 1
   Hp: 0
   Atk: 0
   Cur_Atk_Spd: 0
@@ -28921,22 +28873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18d70f867dbfcb40bb42e8a217f03f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Escape: 0
-  Hp: 0
-  Atk: 0
-  Cur_Atk_Spd: 0
-  Max_Atk_Spd: 0
-  Move_Spd: 2
-  Left_Move: 0
-  Right_Move: 0
-  Move_Max_Time: 3
-  Move_Cur_Time: 0
-  Death_Value: 0
-  Escape_Value: 0
-  AttackReady: 0
-  AttackRange: {fileID: 1620133722}
-  splashRenderer: {fileID: 1586649873}
 --- !u!1 &1620133720
 GameObject:
   m_ObjectHideFlags: 0
