@@ -50,6 +50,7 @@ public class Employee : MonoBehaviour
     void Start()
     {
         Mental = 100;
+        Hp = 100;
     }
 
     void Update()
@@ -171,6 +172,12 @@ public class Employee : MonoBehaviour
     {
         Mental -= (int)amount;
         Debug.Log("Decreased Mental: " + Mental);
+    }
+
+    public void DecreaseHp(float amount)
+    {
+        Hp -= (int)amount;
+        Debug.Log("Decreased Hp: " + Hp);
     }
 
 

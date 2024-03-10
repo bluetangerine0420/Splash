@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Eel : Splash
 {
-  
+    private bool wasEscape = false;
 
     void Start()
     {
@@ -15,6 +16,23 @@ public class Eel : Splash
     void Update()
     {
         Move();
+        if (Escape)
+        {
+            if (Escape != wasEscape)
+            {
+                EscapeAct();
+                wasEscape = Escape;
+            }
+        }
+
+        if (!Escape)
+        {
+            wasEscape = false;
+         
+            CancelInvoke("Decrease");
+           
+
+        }
     }
 
     void FixedUpdate()
@@ -33,6 +51,30 @@ public class Eel : Splash
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
 
            
+        }
+    }
+
+    void EscapeAct()
+    {
+       
+       
+        InvokeRepeating("Decrease", 0f, 3f);
+
+    }
+
+
+    private void Decrease()
+    {
+        if (!Escape)
+        {
+            CancelInvoke("Decrease");
+            return;
+        }
+
+        Employee[] employees = FindObjectsOfType<Employee>();
+        foreach (Employee employee in employees)
+        {
+            employee.DecreaseHp(5);
         }
     }
 }
