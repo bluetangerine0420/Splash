@@ -50,6 +50,7 @@ public class Room : MonoBehaviour
 
     public void Click()
     {
+        if(Input.GetMouseButtonDown(0))
         OpenUI.SetActive(true);
     }
 
