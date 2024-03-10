@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Whale: Splash
+public class Whale : Splash
 {
-  
+    private bool hasEscaped = false; 
 
     void Start()
     {
-      
+
     }
 
     // Update is called once per frame
@@ -16,9 +16,10 @@ public class Whale: Splash
     {
         Move();
 
-        if (Escape)
+        if (Escape && !hasEscaped) 
         {
             EscapeAct();
+            hasEscaped = true; 
         }
     }
 
@@ -26,43 +27,51 @@ public class Whale: Splash
     {
         if (Right_Move)
         {
-            
+
             Vector2 movement = new Vector2(1, -0.01f) * Move_Spd * Time.deltaTime;
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
-        
+
         }
-        else if(Left_Move)
+        else if (Left_Move)
         {
-           
+
             Vector2 movement = new Vector2(-1, -0.01f) * Move_Spd * Time.deltaTime;
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + movement);
 
-           
+
         }
     }
 
     void EscapeAct()
     {
         Starfish starfishObject = GetComponent<Starfish>();
-        Shark SharkObject = GetComponent<Shark>();
-        Crotch CrotchObject = GetComponent<Crotch>();
-        Eel EelObject = GetComponent<Eel>();
-        Seal SealObject = GetComponent<Seal>();
-        Turtle TurtleObject = GetComponent<Turtle>();
-        Lobster LobsterObject = GetComponent<Lobster>();
-        Raysplash RayObject = GetComponent<Raysplash>();
-        Seacucumber SeacucumberObject = GetComponent<Seacucumber>();
+        if (starfishObject != null)
+        {
+            starfishObject.Escape_Value = (int)(starfishObject.Escape_Value * 1.3f);
+        }
 
-        starfishObject.Escape_Value = (int)(starfishObject.Escape_Value * 1.3f);
-        SharkObject.Escape_Value = (int)(SharkObject.Escape_Value * 1.3f);
-        CrotchObject.Escape_Value = (int)(CrotchObject.Escape_Value * 1.3f);
-        EelObject.Escape_Value = (int)(EelObject.Escape_Value * 1.3f);
-        SealObject.Escape_Value = (int)(SealObject.Escape_Value * 1.3f);
-        TurtleObject.Escape_Value = (int)(TurtleObject.Escape_Value * 1.3f);
-        LobsterObject.Escape_Value = (int)(LobsterObject.Escape_Value * 1.3f);
-        RayObject.Escape_Value = (int)(RayObject.Escape_Value * 1.3f);
-        SeacucumberObject.Escape_Value = (int)(SeacucumberObject.Escape_Value * 1.3f);
+        Shark sharkObject = GetComponent<Shark>();
+        if (sharkObject != null)
+        {
+            sharkObject.Escape_Value = (int)(sharkObject.Escape_Value * 1.3f);
+        }
 
+        Crotch crotchObject = GetComponent<Crotch>();
+        if (crotchObject != null)
+        {
+            crotchObject.Escape_Value = (int)(crotchObject.Escape_Value * 1.3f);
+        }
 
+        Eel eelObject = GetComponent<Eel>();
+        if (eelObject != null)
+        {
+            eelObject.Escape_Value = (int)(eelObject.Escape_Value * 1.3f);
+        }
+
+        Raysplash rayObject = GetComponent<Raysplash>();
+        if (rayObject != null)
+        {
+            rayObject.Escape_Value = (int)(rayObject.Escape_Value * 1.3f);
+        }
     }
 }
