@@ -48,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream
   spritePixelsToUnits: 200
-=======
-  spritePixelsToUnits: 120
->>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,19 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -130,10 +113,10 @@ TextureImporter:
       name: starfish_sheet_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 15
-        height: 15
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df10a3d3759c7524c9855fdd0c9a2498
-      internalID: 857452514
+      spriteID: bbda05061da43504e98b2fb8dd9e3d0b
+      internalID: -550084363
       vertices: []
       indices: 
       edges: []
@@ -151,10 +134,10 @@ TextureImporter:
       name: starfish_sheet_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 9
-        width: 15
-        height: 14
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 347e62d2b1b57cf4188fc0cdf893ef19
-      internalID: -410970138
+      spriteID: cc4f006cc40557d4989604040467e901
+      internalID: -1324629691
       vertices: []
       indices: 
       edges: []
@@ -172,10 +155,10 @@ TextureImporter:
       name: starfish_sheet_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 9
-        width: 15
-        height: 13
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c9bbdf0616ec284aa32fb2e0e3f75c1
-      internalID: -203331257
+      spriteID: b34e52617ffd4334a9648f0c1e4dcb12
+      internalID: 431960107
       vertices: []
       indices: 
       edges: []
@@ -193,10 +176,10 @@ TextureImporter:
       name: starfish_sheet_3
       rect:
         serializedVersion: 2
-        x: 105
-        y: 9
-        width: 15
-        height: 14
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95b381843fe3b914aac96881b3abae8a
-      internalID: 2004629247
+      spriteID: 918cf28499909124e8b88d1bbbfaeb4b
+      internalID: 1405894913
       vertices: []
       indices: 
       edges: []
@@ -221,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      starfish_sheet_0: 857452514
-      starfish_sheet_1: -410970138
-      starfish_sheet_2: -203331257
-      starfish_sheet_3: 2004629247
+      starfish_sheet_0: -550084363
+      starfish_sheet_1: -1324629691
+      starfish_sheet_2: 431960107
+      starfish_sheet_3: 1405894913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
