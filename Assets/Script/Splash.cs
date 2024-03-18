@@ -25,7 +25,7 @@ public class Splash : MonoBehaviour
     public float Death_Value;
     public float Escape_Value;
 
-
+    public Employee[] Employees;
 
     public bool AttackReady;
     public Collider2D AttackRange;

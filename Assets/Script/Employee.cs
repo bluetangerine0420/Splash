@@ -28,6 +28,7 @@ public class Employee : MonoBehaviour
     [SerializeField] bool LeftMoving = false;
     [SerializeField] bool RightMoving = false;
     [SerializeField] bool OnElevator;
+    [SerializeField] bool AttackReady;
     [SerializeField] bool Moving = false;
     [SerializeField] bool Caring = false;
     [SerializeField] int Care_Value;
@@ -81,12 +82,20 @@ public class Employee : MonoBehaviour
         {
             OnElevator = true;
         }
+        if (collision.gameObject.tag == "AttackRange")
+        {
+            AttackReady = true;
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Elevator")
         {
             OnElevator = false;
+        }
+        if(collision.gameObject.tag == "AttackRange")
+        {
+            AttackReady = false;
         }
     }
 

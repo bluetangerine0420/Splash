@@ -49,7 +49,7 @@ public class Research : MonoBehaviour
         Cur_Node_Num++;
     }
 
-    int NodeSum()
+    void NodeSum()
     {
         if (Cur_Node_Num == 3)
         {
@@ -77,8 +77,8 @@ public class Research : MonoBehaviour
             rooms[GameManager.Gameinstance.Room_Num].CareSplash = true;
             rooms[GameManager.Gameinstance.Room_Num].Splashes[count].SetActive(true);
         }
-        return 0;
+        return;
     }
-
+    
 
 }
