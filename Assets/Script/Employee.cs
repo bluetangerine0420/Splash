@@ -17,7 +17,8 @@ public class Employee : MonoBehaviour
     public int Mental { get; private set; }
 
 
-    float Atk_Spd;
+    float Cur_Atk_Spd;
+    float Max_Atk_Spd;
 
     int Work_Time;
     float Work_percent;
@@ -39,7 +40,8 @@ public class Employee : MonoBehaviour
 
     public GameObject Elevator;
 
-    public Room targetroom;
+    public Room TargetRoom;
+    public Splash TargetSplash;
 
     [SerializeField] GameObject[] RoomsPos;
     [SerializeField] GameObject[] FloorPos;
@@ -85,6 +87,7 @@ public class Employee : MonoBehaviour
         if (collision.gameObject.tag == "AttackRange")
         {
             AttackReady = true;
+            TargetSplash = collision.gameObject.GetComponent<Splash>();
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -96,17 +99,18 @@ public class Employee : MonoBehaviour
         if(collision.gameObject.tag == "AttackRange")
         {
             AttackReady = false;
+            TargetSplash = null;
         }
     }
 
     void MoveRoom()
     {
-        if (targetroom.Floor != this.Floor)
+        if (TargetRoom.Floor != this.Floor)
         {
             RightMoving = true;
             if (OnElevator)
             {
-                switch (targetroom.Floor)
+                switch (TargetRoom.Floor)
                 {
                     case 1:
                         gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y);
@@ -118,23 +122,23 @@ public class Employee : MonoBehaviour
                         gameObject.transform.position = new Vector2(40, FloorPos[2].transform.position.y);
                         break;
                 }
-                this.Floor = targetroom.Floor;
+                this.Floor = TargetRoom.Floor;
                 RightMoving = false;
                 LeftMoving = true;
             }
         }
-        else if (gameObject.transform.position.x < targetroom.RoomPosition.x)
+        else if (gameObject.transform.position.x < TargetRoom.RoomPosition.x)
             RightMoving = true;
 
-        else if (gameObject.transform.position.x > targetroom.RoomPosition.x)
+        else if (gameObject.transform.position.x > TargetRoom.RoomPosition.x)
             LeftMoving = true;
 
-        if ((targetroom.RoomPosition.x - 1 < this.transform.position.x && this.transform.position.x < targetroom.RoomPosition.x + 1) && targetroom.Floor == this.Floor)
+        if ((TargetRoom.RoomPosition.x - 1 < this.transform.position.x && this.transform.position.x < TargetRoom.RoomPosition.x + 1) && TargetRoom.Floor == this.Floor)
         {
             RightMoving = false;
             LeftMoving = false;
             Moving = false;
-            if(!targetroom.CareSplash)
+            if(!TargetRoom.CareSplash)
             Caring = true;
         }
         
@@ -144,9 +148,21 @@ public class Employee : MonoBehaviour
     {
         Caring = false;
         yield return new WaitForSeconds(2.0f);
-        if (targetroom.Espace_Value - Care_Value > 0)
-            targetroom.Espace_Value -= Care_Value;
-        else targetroom.Espace_Value = 0;
+        if (TargetRoom.Espace_Value - Care_Value > 0)
+            TargetRoom.Espace_Value -= Care_Value;
+        else TargetRoom.Espace_Value = 0;
+    }
+
+     void Attack()
+    {
+        if (AttackReady&&TargetSplash!=null)
+        {
+            if (Max_Atk_Spd <= Cur_Atk_Spd)
+            {
+                TargetSplash.Hp -= Atk;
+            }
+            else Cur_Atk_Spd += Time.deltaTime;
+        }
     }
 
     public void SetRandomStats()
