@@ -46,6 +46,7 @@ public class Splash : MonoBehaviour
 
     public void Move()
     {
+
         if (Move_Max_Time < Move_Cur_Time)
         {
             switch (Random.Range(0, 2))

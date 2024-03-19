@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 452032f3169ea2e4cb8413284612ad63
+guid: f262b8c1ed9a6f442aa5d9d9fba6fde4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character3_working_0
+      name: character3_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19ee95cd4c715654681180ab6bcd4d5c
-      internalID: 989551953
+      spriteID: 2d574baaddf037944bf1acfb12c43573
+      internalID: 1174189970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character3_working_1
+      name: character3_idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033ec278ad26c88448c9e45f48a8ab2b
-      internalID: 501571178
+      spriteID: 363b2b0854c1d364db857863d246b06e
+      internalID: -1355060330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character3_working_2
+      name: character3_idle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eaaa2bebdfb97f4e97a9334fa6f7d07
-      internalID: 2128968207
+      spriteID: 735c521a1922ebe42a82d17e59e89be9
+      internalID: -1088317339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character3_working_3
+      name: character3_idle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf7d83b13d3c17145918fa521f569ae8
-      internalID: -1960507868
+      spriteID: 8db425b732986ee42bd2a2886935d7df
+      internalID: -2028133281
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character3_working_0: 989551953
-      character3_working_1: 501571178
-      character3_working_2: 2128968207
-      character3_working_3: -1960507868
+      character3_idle_0: 1174189970
+      character3_idle_1: -1355060330
+      character3_idle_2: -1088317339
+      character3_idle_3: -2028133281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

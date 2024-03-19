@@ -8,8 +8,9 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 public class Employee : MonoBehaviour
 {
     string Name;
+    public Animator animator;
 
-
+    public SpriteRenderer EmployeeRenderer;
     public int Atk { get; private set; }
     public int Int { get; private set; }
     public int Luck { get; private set; }
@@ -59,9 +60,24 @@ public class Employee : MonoBehaviour
     void Update()
     {
         if (Moving)
+        {
+            animator.SetBool("Walk", true);
             MoveRoom();
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
         if (Caring)
+        {
+            animator.SetBool("Work", true);
             StartCoroutine(Care());
+        }
+        else
+        {
+            animator.SetBool("Work", false);
+        }
+        
     }
 
     void FixedUpdate()
@@ -96,7 +112,7 @@ public class Employee : MonoBehaviour
         {
             OnElevator = false;
         }
-        if(collision.gameObject.tag == "AttackRange")
+        if (collision.gameObject.tag == "AttackRange")
         {
             AttackReady = false;
             TargetSplash = null;
@@ -107,6 +123,7 @@ public class Employee : MonoBehaviour
     {
         if (TargetRoom.Floor != this.Floor)
         {
+            EmployeeRenderer.flipX = true;
             RightMoving = true;
             if (OnElevator)
             {
@@ -128,24 +145,27 @@ public class Employee : MonoBehaviour
             }
         }
         else if (gameObject.transform.position.x < TargetRoom.RoomPosition.x)
+        {
+            EmployeeRenderer.flipX = true;
             RightMoving = true;
-
+        }
         else if (gameObject.transform.position.x > TargetRoom.RoomPosition.x)
-            LeftMoving = true;
+            EmployeeRenderer.flipX = false; LeftMoving = true;
 
         if ((TargetRoom.RoomPosition.x - 1 < this.transform.position.x && this.transform.position.x < TargetRoom.RoomPosition.x + 1) && TargetRoom.Floor == this.Floor)
         {
             RightMoving = false;
             LeftMoving = false;
             Moving = false;
-            if(!TargetRoom.CareSplash)
-            Caring = true;
+            if (!TargetRoom.CareSplash)
+                Caring = true;
         }
-        
+
     }
 
     IEnumerator Care()
     {
+        
         Caring = false;
         yield return new WaitForSeconds(2.0f);
         if (TargetRoom.Espace_Value - Care_Value > 0)
@@ -153,9 +173,9 @@ public class Employee : MonoBehaviour
         else TargetRoom.Espace_Value = 0;
     }
 
-     void Attack()
+    void Attack()
     {
-        if (AttackReady&&TargetSplash!=null)
+        if (AttackReady && TargetSplash != null)
         {
             if (Max_Atk_Spd <= Cur_Atk_Spd)
             {
@@ -193,7 +213,7 @@ public class Employee : MonoBehaviour
         Debug.Log("Recovered Mental: " + Mental);
     }
 
-    public void DecreaseMental(float amount) 
+    public void DecreaseMental(float amount)
     {
         Mental -= (int)amount;
         Debug.Log("Decreased Mental: " + Mental);
