@@ -24,7 +24,7 @@ public class Starfish : Splash
         {
             if (isEscaped)
             {
-                collidedEmployee.Speed *= 2;
+                collidedEmployee.Speed *= 2;    
                 isEscaped = false;
 
             }

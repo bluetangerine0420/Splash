@@ -31,8 +31,8 @@ public class Camera_Move : MonoBehaviour
 
         transform.position = curPos + nextPos;
 
-        float zoom = Input.GetAxis("Mouse ScrollWheel");
-        CM.m_Lens.OrthographicSize -= zoom * zoom_speed;
+        //float zoom = Input.GetAxis("Mouse ScrollWheel");
+        //CM.m_Lens.OrthographicSize -= zoom * zoom_speed;
 
     }
 }

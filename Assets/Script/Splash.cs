@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class Splash : MonoBehaviour
 {
-    
     public string Name;
-
-
-    public bool Escape = false;
 
     public int Hp;
     public int Atk;
     public float Cur_Atk_Spd;
     public float Max_Atk_Spd;
 
+
     public float Move_Spd;
     public bool Left_Move;
     public bool Right_Move;
-
     public float Move_Max_Time;
     public float Move_Cur_Time;
 
+
     public float Death_Value;
+
+    public bool Escape = false;
     public float Escape_Value;
+
+    public float Grow_Value;
+    public int Grow;
 
     public Employee[] Employees;
 
@@ -59,12 +61,13 @@ public class Splash : MonoBehaviour
                         Move_Cur_Time = 0;
                     }
                     break;
-                case 1:{
+                case 1:
+                    {
                         splashRenderer.flipX = true;
                         Left_Move = false;
                         Right_Move = true;
                         Move_Cur_Time = 0;
-                        }
+                    }
                     break;
             }
         }

@@ -34,17 +34,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        RoomCheck();
     }
 
     void RoomCheck()
     {
-        int check = 0;
-        for (int i = 0; i < 9; i++)
-        {
-            if (Rooms[i].CareSplash) check++;
-        }
-        Room_Num = check;
+        if (Rooms[0].CareSplash == null) Room_Num = 0;
+        else if (Rooms[1].CareSplash == null) Room_Num = 1;
+        else if (Rooms[2].CareSplash == null) Room_Num = 2;
+        else if (Rooms[3].CareSplash == null) Room_Num = 3;
+        else if (Rooms[4].CareSplash == null) Room_Num = 4;
+        else if (Rooms[5].CareSplash == null) Room_Num = 5;
+        else if (Rooms[6].CareSplash == null) Room_Num = 6;
+        else if (Rooms[7].CareSplash == null) Room_Num = 7;
+        else if (Rooms[8].CareSplash == null) Room_Num = 8;
         // Update is called once per frame
     }
 }

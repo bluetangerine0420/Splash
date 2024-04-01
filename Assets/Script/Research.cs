@@ -8,24 +8,13 @@ using UnityEngine.Rendering;
 
 public class Research : MonoBehaviour
 {
-    class DNAnode
-    {
-        public int Ray;
-        public int Starfish;
-        public int snail;
-        public int Walrus;
-        public int Whale;
-        public int Eel;
-        public int Shark;
-        public int Turtle;
-        public int Monkfish;
-        public int Crayfish;
-    }
-    GameObject[] ResearchUi;
-    DNAnode[] Nodes;
-    GameObject[] SplashUi;
-    int Cur_Node_Num = 0;
+    [SerializeField] Splash[] Splashes;
+    [SerializeField] GameObject[] ResearchUi;
+    [SerializeField] NodeScript[] Nodes;
+    [SerializeField] GameObject[] SplashUi;
+    [SerializeField] int Cur_Node_Num = 0;
     [SerializeField] Room[] rooms;
+    [SerializeField] GameObject[] NodeCheckPoint;
     struct Sums
     {
         public int NodeValue;
@@ -40,45 +29,51 @@ public class Research : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NodeSum();
+        if (Cur_Node_Num > 0)
+            NodeCheckPoint[Cur_Node_Num - 1].SetActive(true);
     }
 
-    void InNode(DNAnode NowNode)
+    public void InNode(NodeScript NowNode)
     {
-        Nodes[Cur_Node_Num] = NowNode;
-        Cur_Node_Num++;
+        if (Cur_Node_Num < 3)
+        {
+            Nodes[Cur_Node_Num] = NowNode;
+            Cur_Node_Num++;
+        }
     }
 
-    void NodeSum()
+            [SerializeField]int count = 0;
+    public void NodeSum()
     {
+
         if (Cur_Node_Num == 3)
         {
-            int[] SumValue = new int[10];
+            Cur_Node_Num = 0;
+            for(int i=0; i<3; i++) NodeCheckPoint[i].SetActive(false);
+            int[] SumValue = new int[6];
             for (int i = 0; i < 3; i++)
             {
                 SumValue[0] += Nodes[i].Ray;
                 SumValue[1] += Nodes[i].Starfish;
-                SumValue[2] += Nodes[i].snail;
-                SumValue[3] += Nodes[i].Walrus;
-                SumValue[4] += Nodes[i].Whale;
-                SumValue[5] += Nodes[i].Eel;
-                SumValue[6] += Nodes[i].Shark;
-                SumValue[7] += Nodes[i].Turtle;
-                SumValue[8] += Nodes[i].Monkfish;
-                SumValue[9] += Nodes[i].Crayfish;
+                SumValue[2] += Nodes[i].Whale;
+                SumValue[3] += Nodes[i].Eel;
+                SumValue[4] += Nodes[i].Shark;
+                SumValue[5] += Nodes[i].Monkfish;
             }
             int max = SumValue[0];
-            int count = 1;
-            for (int i = 1; i < 10; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (max < SumValue[i])
                     count++;
             }
-            rooms[GameManager.Gameinstance.Room_Num].CareSplash = true;
-            rooms[GameManager.Gameinstance.Room_Num].Splashes[count].SetActive(true);
+            rooms[GameManager.Gameinstance.Room_Num].CareSplash = Splashes[count];
         }
+        
         return;
     }
-    
+    public void OFF(GameObject Ui)
+    {
+        Ui.SetActive(false);
+    }
 
 }

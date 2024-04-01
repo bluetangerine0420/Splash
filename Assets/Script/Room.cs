@@ -11,31 +11,22 @@ public class Room : MonoBehaviour
     public int Floor;
     public int Room_Num;
 
+    public GameObject Ui;
+
+    public Splash CareSplash;
     public Sprite[] Room_Speites;
-    SpriteRenderer RoomRenderer;
-
-    public GameObject OpenUI;
-
-    public bool CareSplash;
-    public GameObject[] Splashes;
-
+    [SerializeField]bool[] whatSplash;
     public Vector3 RoomPosition;
-
-
-    public float Espace_Value;
-    public bool Escpae;
-
-    public float Grow_Value;
-    public int Grow;
 
     public float Work_Time;
     public float Work_percent;
     public float Work_Spd;
 
+    SpriteRenderer SpriteRenderer;
     void Awake()
     {
-        RoomRenderer = GetComponent<SpriteRenderer>();
         RoomPosition = this.transform.position;
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Start()
     {
@@ -43,15 +34,35 @@ public class Room : MonoBehaviour
     }
     void Update()
     {
-
+        RoomUpdate();
     }
 
-
+    void RoomUpdate()
+    {
+        if (CareSplash != null)
+        {
+            switch (CareSplash.Name)
+            {
+                case "Ray":whatSplash[0]=true; break;
+                case "StarFish": whatSplash[1] = true; break;
+                case "Whale": whatSplash[2] = true; break;
+                case "Eel": whatSplash[3] = true; break;
+                case "Shark": whatSplash[4] = true; break;
+                case "Crotch": whatSplash[5] = true; break;
+            }
+            if (whatSplash[0]) SpriteRenderer.sprite = Room_Speites[0];
+            else if (whatSplash[1]) SpriteRenderer.sprite = Room_Speites[1];
+            else if (whatSplash[2]) SpriteRenderer.sprite = Room_Speites[2];
+            else if (whatSplash[3]) SpriteRenderer.sprite = Room_Speites[3];
+            else if (whatSplash[4]) SpriteRenderer.sprite = Room_Speites[4];
+            else if (whatSplash[5]) SpriteRenderer.sprite = Room_Speites[5];
+        }
+    }
 
     public void Click()
     {
-        if(Input.GetMouseButtonDown(0))
-        OpenUI.SetActive(true);
+        if (Input.GetMouseButtonDown(0))
+            Ui.SetActive(true);
     }
 
     void OnMouseOver()

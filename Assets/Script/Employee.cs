@@ -77,7 +77,7 @@ public class Employee : MonoBehaviour
         {
             animator.SetBool("Work", false);
         }
-        
+        if(Moving) MoveRoom();
     }
 
     void FixedUpdate()
@@ -162,15 +162,19 @@ public class Employee : MonoBehaviour
         }
 
     }
-
+    public void MoveSetting(Room room)
+    {
+        TargetRoom=room;
+        Moving = true;
+    }
     IEnumerator Care()
     {
         
         Caring = false;
         yield return new WaitForSeconds(2.0f);
-        if (TargetRoom.Espace_Value - Care_Value > 0)
-            TargetRoom.Espace_Value -= Care_Value;
-        else TargetRoom.Espace_Value = 0;
+        if (TargetRoom.CareSplash.Escape_Value - Care_Value > 0)
+            TargetRoom.CareSplash.Escape_Value -= Care_Value;
+        else TargetRoom.CareSplash.Escape_Value = 0;
     }
 
     void Attack()
