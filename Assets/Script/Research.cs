@@ -9,7 +9,6 @@ using UnityEngine.Rendering;
 public class Research : MonoBehaviour
 {
     [SerializeField] Splash[] Splashes;
-    [SerializeField] GameObject[] ResearchUi;
     [SerializeField] NodeScript[] Nodes;
     [SerializeField] GameObject[] SplashUi;
     [SerializeField] int Cur_Node_Num = 0;
@@ -42,10 +41,10 @@ public class Research : MonoBehaviour
         }
     }
 
-            [SerializeField]int count = 0;
+            
     public void NodeSum()
     {
-
+        int count = 0;
         if (Cur_Node_Num == 3)
         {
             Cur_Node_Num = 0;

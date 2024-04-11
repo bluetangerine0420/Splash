@@ -14,6 +14,10 @@ public class Room : MonoBehaviour
     public GameObject Ui;
 
     public Splash CareSplash;
+    public float Escape_Value;
+    public float Escape_Power;
+    public float Grow_Value;
+    public float Grow_Power;
     public Sprite[] Room_Speites;
     [SerializeField]bool[] whatSplash;
     public Vector3 RoomPosition;
@@ -35,6 +39,16 @@ public class Room : MonoBehaviour
     void Update()
     {
         RoomUpdate();
+        if(CareSplash!=null)
+        {
+            Escape_Value += Time.deltaTime* Escape_Power;
+            Grow_Value += Time.deltaTime* Grow_Power;
+        }
+        else if(CareSplash==null)
+        {
+            Escape_Value = 0;
+            Grow_Value = 0;
+        }
     }
 
     void RoomUpdate()
@@ -57,16 +71,5 @@ public class Room : MonoBehaviour
             else if (whatSplash[4]) SpriteRenderer.sprite = Room_Speites[4];
             else if (whatSplash[5]) SpriteRenderer.sprite = Room_Speites[5];
         }
-    }
-
-    public void Click()
-    {
-        if (Input.GetMouseButtonDown(0))
-            Ui.SetActive(true);
-    }
-
-    void OnMouseOver()
-    {
-        Click();
     }
 }

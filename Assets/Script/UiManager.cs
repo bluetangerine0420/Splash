@@ -9,6 +9,10 @@ public class UiManager : MonoBehaviour
     {
       Obj.SetActive(false);
     }
+    public void UiOn(GameObject Obj)
+    {
+      Obj.SetActive(true);
+    }
 
     
 }

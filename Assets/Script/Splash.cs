@@ -34,7 +34,10 @@ public class Splash : MonoBehaviour
 
     public SpriteRenderer splashRenderer;
 
-    
+    private void Update()
+    {
+        
+    }
 
     public void Attack()
     {

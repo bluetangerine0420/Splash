@@ -31,6 +31,12 @@ public class Camera_Move : MonoBehaviour
 
         transform.position = curPos + nextPos;
 
+        if (transform.position.y < 0) transform.position = new Vector3(transform.position.x, 0, transform.position.z);//3.9
+        else if(transform.position.y >10) transform.position = new Vector3(transform.position.x, 10, transform.position.z);
+        if (transform.position.x <-24) transform.position = new Vector3(-24, transform.position.y, transform.position.z);//-0.5
+        else if (transform.position.x > 25.2f) transform.position = new Vector3(25.2f, transform.position.y, transform.position.z);
+       
+
         //float zoom = Input.GetAxis("Mouse ScrollWheel");
         //CM.m_Lens.OrthographicSize -= zoom * zoom_speed;
 

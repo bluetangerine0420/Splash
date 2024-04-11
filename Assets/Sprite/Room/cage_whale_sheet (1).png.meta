@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3190c8aded312d04d83c34e5a09fd8b2
+guid: d5317268bce13054191a4e9a57028551
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cage_starfish_sheet_0
+      name: cage_whale_sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35ddb0d456ba8c34ab2f66f29edaed96
-      internalID: 1723726905
+      spriteID: bd87653aa82a8d34c9c6a40236bad304
+      internalID: 1521046090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cage_starfish_sheet_1
+      name: cage_whale_sheet (1)_1
       rect:
         serializedVersion: 2
         x: 256
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914652740c1579c41a8a407978cad15a
-      internalID: -1308625305
+      spriteID: d7923e12d764ea0498d6fcb2dced8665
+      internalID: -909917324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cage_starfish_sheet_2
+      name: cage_whale_sheet (1)_2
       rect:
         serializedVersion: 2
         x: 512
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12ffc82fcc65b14190d8499e7d9083f
-      internalID: -1444789718
+      spriteID: f3076f78679faa44199da66c48de92ff
+      internalID: 1442075988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cage_starfish_sheet_3
+      name: cage_whale_sheet (1)_3
       rect:
         serializedVersion: 2
         x: 768
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770a3ef0fa624cf43a5f860d2a00cb60
-      internalID: 174686249
+      spriteID: 73c882ccf68df98498007ecfa43d57b3
+      internalID: 2037432179
       vertices: []
       indices: 
       edges: []
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cage_starfish_sheet_0: 1723726905
-      cage_starfish_sheet_1: -1308625305
-      cage_starfish_sheet_2: -1444789718
-      cage_starfish_sheet_3: 174686249
+      cage_whale_sheet (1)_0: 1521046090
+      cage_whale_sheet (1)_1: -909917324
+      cage_whale_sheet (1)_2: 1442075988
+      cage_whale_sheet (1)_3: 2037432179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

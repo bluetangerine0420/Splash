@@ -130,13 +130,13 @@ public class Employee : MonoBehaviour
                 switch (TargetRoom.Floor)
                 {
                     case 1:
-                        gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y);
+                        gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y-2);
                         break;
                     case 2:
-                        gameObject.transform.position = new Vector2(40, FloorPos[1].transform.position.y);
+                        gameObject.transform.position = new Vector2(40, FloorPos[1].transform.position.y-2);
                         break;
                     case 3:
-                        gameObject.transform.position = new Vector2(40, FloorPos[2].transform.position.y);
+                        gameObject.transform.position = new Vector2(40, FloorPos[2].transform.position.y - 2);
                         break;
                 }
                 this.Floor = TargetRoom.Floor;
