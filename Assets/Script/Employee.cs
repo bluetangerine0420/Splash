@@ -33,11 +33,10 @@ public class Employee : MonoBehaviour
     [SerializeField] bool AttackReady;
     [SerializeField] bool Moving = false;
     [SerializeField] bool Caring = false;
-    [SerializeField] int Care_Value;
 
-    int Lv;
-    int Exp;
-
+    [SerializeField] float Cur_Care;
+    [SerializeField] float Max_Care;
+    [SerializeField] int CarePower;
 
     public GameObject Elevator;
 
@@ -71,13 +70,14 @@ public class Employee : MonoBehaviour
         if (Caring)
         {
             animator.SetBool("Work", true);
-            StartCoroutine(Care());
+            
         }
         else
         {
             animator.SetBool("Work", false);
         }
         if(Moving) MoveRoom();
+        if(Caring) Care();
     }
 
     void FixedUpdate()
@@ -157,7 +157,7 @@ public class Employee : MonoBehaviour
             RightMoving = false;
             LeftMoving = false;
             Moving = false;
-            if (!TargetRoom.CareSplash)
+            if (TargetRoom.CareSplash!=null)
                 Caring = true;
         }
 
@@ -167,16 +167,18 @@ public class Employee : MonoBehaviour
         TargetRoom=room;
         Moving = true;
     }
-    IEnumerator Care()
+    
+    void Care()
     {
-        
-        Caring = false;
-        yield return new WaitForSeconds(2.0f);
-        if (TargetRoom.CareSplash.Escape_Value - Care_Value > 0)
-            TargetRoom.CareSplash.Escape_Value -= Care_Value;
-        else TargetRoom.CareSplash.Escape_Value = 0;
+        if (Max_Care <= Cur_Care)
+        {
+            Caring = false;
+            Cur_Care = 0;
+            TargetRoom.Escape_Value -= CarePower;
+        }
+        else
+            Cur_Care += Time.deltaTime * CarePower;
     }
-
     void Attack()
     {
         if (AttackReady && TargetSplash != null)

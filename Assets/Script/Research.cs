@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +45,6 @@ public class Research : MonoBehaviour
             
     public void NodeSum()
     {
-        int count = 0;
         if (Cur_Node_Num == 3)
         {
             Cur_Node_Num = 0;
@@ -59,15 +59,9 @@ public class Research : MonoBehaviour
                 SumValue[4] += Nodes[i].Shark;
                 SumValue[5] += Nodes[i].Monkfish;
             }
-            int max = SumValue[0];
-            for (int i = 0; i < 6; i++)
-            {
-                if (max < SumValue[i])
-                    count++;
-            }
-            rooms[GameManager.Gameinstance.Room_Num].CareSplash = Splashes[count];
+            int max = Array.FindIndex(SumValue, x => x == SumValue.Max());
+            rooms[GameManager.Gameinstance.Room_Num].CareSplash = Splashes[max];
         }
-        
         return;
     }
     public void OFF(GameObject Ui)

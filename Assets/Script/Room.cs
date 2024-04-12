@@ -20,17 +20,19 @@ public class Room : MonoBehaviour
     public float Grow_Power;
     public Sprite[] Room_Speites;
     [SerializeField]bool[] whatSplash;
+    [SerializeField] GameObject[] Splashes;
     public Vector3 RoomPosition;
 
     public float Work_Time;
     public float Work_percent;
     public float Work_Spd;
 
-    SpriteRenderer SpriteRenderer;
+    
+    Animator animator;
     void Awake()
     {
         RoomPosition = this.transform.position;
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -39,16 +41,8 @@ public class Room : MonoBehaviour
     void Update()
     {
         RoomUpdate();
-        if(CareSplash!=null)
-        {
-            Escape_Value += Time.deltaTime* Escape_Power;
-            Grow_Value += Time.deltaTime* Grow_Power;
-        }
-        else if(CareSplash==null)
-        {
-            Escape_Value = 0;
-            Grow_Value = 0;
-        }
+        Grow();
+        Escape();
     }
 
     void RoomUpdate()
@@ -64,12 +58,63 @@ public class Room : MonoBehaviour
                 case "Shark": whatSplash[4] = true; break;
                 case "Crotch": whatSplash[5] = true; break;
             }
-            if (whatSplash[0]) SpriteRenderer.sprite = Room_Speites[0];
-            else if (whatSplash[1]) SpriteRenderer.sprite = Room_Speites[1];
-            else if (whatSplash[2]) SpriteRenderer.sprite = Room_Speites[2];
-            else if (whatSplash[3]) SpriteRenderer.sprite = Room_Speites[3];
-            else if (whatSplash[4]) SpriteRenderer.sprite = Room_Speites[4];
-            else if (whatSplash[5]) SpriteRenderer.sprite = Room_Speites[5];
+            if (whatSplash[0]) animator.SetInteger("CageSet",1);
+            else if (whatSplash[1]) animator.SetInteger("CageSet", 2);
+            else if (whatSplash[2]) animator.SetInteger("CageSet", 3);
+            else if (whatSplash[3]) animator.SetInteger("CageSet", 4);
+            else if (whatSplash[4]) animator.SetInteger("CageSet", 5);
+            else if (whatSplash[5]) animator.SetInteger("CageSet", 6);
+        }
+    }
+    void Grow()
+    {
+        if (CareSplash != null)
+        {
+            Grow_Value += Time.deltaTime * Grow_Power;
+        }
+        else if(CareSplash == null)
+        {
+            Grow_Value = 0;
+        }
+        if(Grow_Value > 100 && CareSplash != null)
+        {
+            CareSplash = null;
+            for (int i = 0; i < Splashes.Length; i++)
+            {
+                whatSplash[i] = false;
+            }
+            animator.SetInteger("CageSet", 0);
+            GameManager.Gameinstance.ClearSplash++;
+        }
+    }
+
+    void Escape()
+    {
+        if (CareSplash != null)
+        {
+            Escape_Value += Time.deltaTime * Escape_Power;
+        }
+        else if (CareSplash == null)
+        {
+            Escape_Value = 0;
+        }
+        if (Escape_Value > 100 && CareSplash != null)
+        {
+            switch (CareSplash.Name)
+            {
+                case "Ray": Instantiate(Splashes[0], transform); break;
+                case "StarFish": Instantiate(Splashes[1], transform); break;
+                case "Whale": Instantiate(Splashes[2], transform); break;
+                case "Eel": Instantiate(Splashes[3], transform); break;
+                case "Shark": Instantiate(Splashes[4], transform); break;
+                case "Crotch": Instantiate(Splashes[5], transform); break;
+            }
+            CareSplash = null;
+            for(int i = 0; i < Splashes.Length; i++)
+            {
+                whatSplash[i]=false;
+            }
+            animator.SetInteger("CageSet", 0);
         }
     }
 }

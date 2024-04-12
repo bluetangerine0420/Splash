@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class GameManager : MonoBehaviour
     public int Room_Num;
     public Room[] Rooms;
     public static GameManager Gameinstance = null;
-
+    public int ClearSplash;
+    public int GoalSplash;
+    public Text a; 
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +39,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         RoomCheck();
+        ClearCheck();
     }
 
     void RoomCheck()
@@ -48,6 +53,12 @@ public class GameManager : MonoBehaviour
         else if (Rooms[6].CareSplash == null) Room_Num = 6;
         else if (Rooms[7].CareSplash == null) Room_Num = 7;
         else if (Rooms[8].CareSplash == null) Room_Num = 8;
-        // Update is called once per frame
+       
+    }
+    void ClearCheck()
+    {
+        if (ClearSplash >= GoalSplash)
+            SceneManager.LoadScene("ClearScene");
+        else a.text = (GoalSplash - ClearSplash).ToString();
     }
 }

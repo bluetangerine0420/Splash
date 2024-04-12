@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Script/Dahee/Start/Start.unity
     guid: e27688df8007c3d4995ebfd5952e14da
   - enabled: 1
-    path: Assets/Scenes/GamePlay.unity
+    path: Assets/Scenes/OpenScene.unity
+    guid: 7153eee2164e9c44590b9f12cdf140ac
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
     guid: db8e256a8594e7148a194e547344a2dc
+  - enabled: 1
+    path: Assets/Scenes/ClearScene.unity
+    guid: 58dda9d9e04c2fa4f91e20e46d3d957b
   m_configObjects: {}
