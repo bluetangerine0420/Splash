@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Employee : MonoBehaviour
@@ -14,7 +15,7 @@ public class Employee : MonoBehaviour
     public int Atk { get; private set; }
     public int Int { get; private set; }
     public int Luck { get; private set; }
-    public int Hp { get; private set; }
+    public int Hp;
     public int Mental { get; private set; }
 
 
@@ -46,9 +47,10 @@ public class Employee : MonoBehaviour
     [SerializeField] GameObject[] RoomsPos;
     [SerializeField] GameObject[] FloorPos;
 
+    [SerializeField] GameObject prfHpBar;
+    [SerializeField] GameObject Canvas;
+
     Item[] Item_list = new Item[3];
-
-
 
     void Start()
     {
@@ -78,6 +80,7 @@ public class Employee : MonoBehaviour
         }
         if(Moving) MoveRoom();
         if(Caring) Care();
+        HpUpdate();
     }
 
     void FixedUpdate()
@@ -189,6 +192,12 @@ public class Employee : MonoBehaviour
             }
             else Cur_Atk_Spd += Time.deltaTime;
         }
+    }
+
+    void HpUpdate()
+    {
+        
+    
     }
 
     public void SetRandomStats()
