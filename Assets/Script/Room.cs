@@ -84,7 +84,7 @@ public class Room : MonoBehaviour
                 whatSplash[i] = false;
             }
             animator.SetInteger("CageSet", 0);
-            GameManager.Gameinstance.ClearSplash++;
+            if(GameManager.Gameinstance!=null) GameManager.Gameinstance.ClearSplash++;
         }
     }
 

@@ -60,7 +60,9 @@ public class Research : MonoBehaviour
                 SumValue[5] += Nodes[i].Monkfish;
             }
             int max = Array.FindIndex(SumValue, x => x == SumValue.Max());
+            if(GameManager.Gameinstance!=null)
             rooms[GameManager.Gameinstance.Room_Num].CareSplash = Splashes[max];
+            else if(GameManager.Gameinstance==null) rooms[0].CareSplash = Splashes[max];
         }
         return;
     }

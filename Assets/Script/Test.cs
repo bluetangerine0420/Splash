@@ -17,8 +17,8 @@ public class Test : MonoBehaviour
         
     }
 
-    public void Load()
+    public void Load(int a)
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(a);
     }
 }
