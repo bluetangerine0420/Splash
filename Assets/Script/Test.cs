@@ -19,6 +19,6 @@ public class Test : MonoBehaviour
 
     public void Load()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Tutorial");
     }
 }

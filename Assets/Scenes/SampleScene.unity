@@ -304,8 +304,13 @@ MonoBehaviour:
   Room_Num: 3
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -12290,8 +12295,13 @@ MonoBehaviour:
   Room_Num: 1
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -12761,8 +12771,13 @@ MonoBehaviour:
   Room_Num: 5
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -14495,8 +14510,13 @@ MonoBehaviour:
   Room_Num: 2
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -29148,8 +29168,13 @@ MonoBehaviour:
   Room_Num: 6
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -29488,8 +29513,13 @@ MonoBehaviour:
   Room_Num: 4
   Ui: {fileID: 0}
   CareSplash: {fileID: 0}
+  Escape_Value: 0
+  Escape_Power: 0
+  Grow_Value: 0
+  Grow_Power: 0
   Room_Speites: []
   whatSplash: 
+  Splashes: []
   RoomPosition: {x: 0, y: 0, z: 0}
   Work_Time: 0
   Work_percent: 0
@@ -32126,6 +32156,10 @@ PrefabInstance:
     - target: {fileID: 1388294419819536983, guid: 093273efb65999a4ab41e47a7c23b4ea, type: 3}
       propertyPath: m_Name
       value: Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511846418532802807, guid: 093273efb65999a4ab41e47a7c23b4ea, type: 3}
+      propertyPath: Escape
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127274265316288867, guid: 093273efb65999a4ab41e47a7c23b4ea, type: 3}
       propertyPath: m_Pivot.x
