@@ -87,7 +87,7 @@ public class Splash : MonoBehaviour
             for (int i = 0; i < employees.Length; i++)
             {
                 if (collider.gameObject == employees[i])
-                    employees[i].DecreaseHp(5f);
+                    employees[i].DecreaseHp(5);
             }
         }
            
