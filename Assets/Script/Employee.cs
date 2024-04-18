@@ -16,7 +16,7 @@ public class Employee : MonoBehaviour
     public int Atk { get; private set; }
     public int Int { get; private set; }
     public int Luck { get; private set; }
-    public float Hp;
+    public int Hp;
     public int Mental { get; private set; }
 
 
@@ -211,7 +211,7 @@ public class Employee : MonoBehaviour
 
     void HpUpdate()
     {
-        if (Hp < 100) Hp += 0.01f;
+        if (Hp < 100) Hp += (int)0.01f;
         Vector3 _hpBarPos =
             Camera.main.WorldToScreenPoint(new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, 0));
         hpBar.position = _hpBarPos;

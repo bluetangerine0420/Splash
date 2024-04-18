@@ -96,7 +96,7 @@ public class Eel : Splash
         Employee[] employees = FindObjectsOfType<Employee>();
         foreach (Employee employee in employees)
         {
-            employee.DecreaseHp(5f);
+            employee.DecreaseHp(5);
         }
     }
 
