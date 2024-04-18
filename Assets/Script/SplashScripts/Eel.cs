@@ -43,6 +43,16 @@ public class Eel : Splash
         {
             animator.SetBool("Escape", false);
         }
+
+
+        if(AttackReady)
+        {
+            animator.SetBool("isAttack", true);
+        }
+        if(!AttackReady)
+        {
+            animator.SetBool("isAttack", false);
+        }
     }
 
     void FixedUpdate()
@@ -87,4 +97,8 @@ public class Eel : Splash
             employee.DecreaseHp(5);
         }
     }
+
+
+    
+
 }

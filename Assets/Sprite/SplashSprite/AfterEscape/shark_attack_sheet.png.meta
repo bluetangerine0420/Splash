@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21de2f66010eec54baf6e20b105bdd8f
+guid: 7abd5dc55e3be9346abe3d9826a50bd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crotch_idle_sheet_0
+      name: shark_attack_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a182c8164e4761b4e838fecc15b6c980
+      internalID: -1246342495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_attack_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d4899d982e10f4abf2dc07f106abe5
+      internalID: -1425758016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_attack_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd7ba8f3b85f8b4e99376a99142a42c
+      internalID: -1518483362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_attack_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f542d709ee84eae43a09fc1e3014489b
+      internalID: -59598479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_attack_sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcf034a5a4105147b2aa3fe1376c95f
-      internalID: 246886034
+      spriteID: da8aed3cc4d9b5b4994374a4d4e7c241
+      internalID: 1831128629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_1
+      name: shark_attack_sheet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -158,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f6db14961aefc047bac5e0a7a5a2dfa
-      internalID: 760027679
+      spriteID: d7f4d6f995a27da419dee31227020d2e
+      internalID: -1217480913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_2
+      name: shark_attack_sheet_6
       rect:
         serializedVersion: 2
         x: 160
@@ -179,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01d8c5182b466745a90e0308fa59a0b
-      internalID: 447956670
+      spriteID: da63cd3378aaa6e4d8587e1357c9beb9
+      internalID: 1617480522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_3
+      name: shark_attack_sheet_7
       rect:
         serializedVersion: 2
         x: 240
@@ -200,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc2cbbe176efce42b48495e12a7b98c
-      internalID: 253788858
+      spriteID: 19b1b8bdec48a284d90709b203bba894
+      internalID: 314826194
       vertices: []
       indices: 
       edges: []
@@ -217,10 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crotch_idle_sheet_0: 246886034
-      crotch_idle_sheet_1: 760027679
-      crotch_idle_sheet_2: 447956670
-      crotch_idle_sheet_3: 253788858
+      shark_attack_sheet_0: -1246342495
+      shark_attack_sheet_1: -1425758016
+      shark_attack_sheet_2: -1518483362
+      shark_attack_sheet_3: -59598479
+      shark_attack_sheet_4: 1831128629
+      shark_attack_sheet_5: -1217480913
+      shark_attack_sheet_6: 1617480522
+      shark_attack_sheet_7: 314826194
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
