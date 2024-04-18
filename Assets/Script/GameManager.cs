@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int Splash_Num;
     public int Room_Num;
     public Room[] Rooms;
+    public Employee[] Employees;
     public static GameManager Gameinstance = null;
     public int ClearSplash;
     public int GoalSplash;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         RoomCheck();
         ClearCheck();
+        if (Employees[0].Hp <= 0 && Employees[1].Hp <= 0 && Employees[2].Hp <= 0) SceneManager.LoadScene("GameOver");//game Over
     }
 
     void RoomCheck()

@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Properties;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class Employee : MonoBehaviour
     public int Atk { get; private set; }
     public int Int { get; private set; }
     public int Luck { get; private set; }
-    public int Hp;
+    public float Hp;
     public int Mental { get; private set; }
 
 
@@ -34,7 +35,7 @@ public class Employee : MonoBehaviour
     [SerializeField] bool AttackReady;
     [SerializeField] bool Moving = false;
     [SerializeField] bool Caring = false;
-    [SerializeField] bool Hitting = false; 
+    [SerializeField] bool Hitting = false;
 
     [SerializeField] float Cur_Care;
     [SerializeField] float Max_Care;
@@ -61,7 +62,7 @@ public class Employee : MonoBehaviour
     {
         Mental = 100;
         Hp = 100;
-        hpBar =Instantiate(prfhpBar,Canvas.transform).GetComponent<RectTransform>();
+        hpBar = Instantiate(prfhpBar, Canvas.transform).GetComponent<RectTransform>();
         HpFill = hpBar.transform.GetChild(0).GetComponent<Image>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -80,17 +81,20 @@ public class Employee : MonoBehaviour
         if (Caring)
         {
             animator.SetBool("Work", true);
-            
+
         }
         else
         {
             animator.SetBool("Work", false);
         }
-        if(Moving) MoveRoom();
-        if(Caring) Care();
-        if (Hitting) { StartCoroutine("HitAnimation");
+        if (Moving) MoveRoom();
+        if (Caring) Care();
+        if (Hitting)
+        {
+            StartCoroutine("HitAnimation");
             Hitting = false;
         }
+        if (Hp <= 0) gameObject.SetActive(false);
         HpUpdate();
     }
 
@@ -144,10 +148,10 @@ public class Employee : MonoBehaviour
                 switch (TargetRoom.Floor)
                 {
                     case 1:
-                        gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y-2);
+                        gameObject.transform.position = new Vector2(40, FloorPos[0].transform.position.y - 2);
                         break;
                     case 2:
-                        gameObject.transform.position = new Vector2(40, FloorPos[1].transform.position.y-2);
+                        gameObject.transform.position = new Vector2(40, FloorPos[1].transform.position.y - 2);
                         break;
                     case 3:
                         gameObject.transform.position = new Vector2(40, FloorPos[2].transform.position.y - 2);
@@ -171,17 +175,17 @@ public class Employee : MonoBehaviour
             RightMoving = false;
             LeftMoving = false;
             Moving = false;
-            if (TargetRoom.CareSplash!=null)
+            if (TargetRoom.CareSplash != null)
                 Caring = true;
         }
 
     }
     public void MoveSetting(Room room)
     {
-        TargetRoom=room;
+        TargetRoom = room;
         Moving = true;
     }
-    
+
     void Care()
     {
         if (Max_Care <= Cur_Care)
@@ -207,10 +211,11 @@ public class Employee : MonoBehaviour
 
     void HpUpdate()
     {
+        if (Hp < 100) Hp += 0.01f;
         Vector3 _hpBarPos =
-            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-1.5f,transform.position.y+1.5f,0));
-            hpBar.position = _hpBarPos;
-            HpFill.fillAmount = Hp*0.01f;
+            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, 0));
+        hpBar.position = _hpBarPos;
+        HpFill.fillAmount = Hp * 0.01f;
     }
 
     public void SetRandomStats()
@@ -230,7 +235,7 @@ public class Employee : MonoBehaviour
         EmplSelect emplSelect = FindObjectOfType<EmplSelect>();
         if (emplSelect != null)
         {
-            emplSelect.UpdateStatsText(Atk, Int, Luck, Hp, Mental);
+            emplSelect.UpdateStatsText(Atk, Int, Luck, (int)Hp, Mental);
         }
     }
 
@@ -255,7 +260,7 @@ public class Employee : MonoBehaviour
 
     IEnumerator HitAnimation()
     {
-        
+
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
