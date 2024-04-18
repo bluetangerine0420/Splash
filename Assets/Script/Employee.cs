@@ -34,6 +34,7 @@ public class Employee : MonoBehaviour
     [SerializeField] bool AttackReady;
     [SerializeField] bool Moving = false;
     [SerializeField] bool Caring = false;
+    [SerializeField] bool Hitting = false; 
 
     [SerializeField] float Cur_Care;
     [SerializeField] float Max_Care;
@@ -53,6 +54,7 @@ public class Employee : MonoBehaviour
 
     RectTransform hpBar;
 
+    SpriteRenderer spriteRenderer;
     Item[] Item_list = new Item[3];
 
     void Start()
@@ -61,6 +63,7 @@ public class Employee : MonoBehaviour
         Hp = 100;
         hpBar =Instantiate(prfhpBar,Canvas.transform).GetComponent<RectTransform>();
         HpFill = hpBar.transform.GetChild(0).GetComponent<Image>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -85,6 +88,9 @@ public class Employee : MonoBehaviour
         }
         if(Moving) MoveRoom();
         if(Caring) Care();
+        if (Hitting) { StartCoroutine("HitAnimation");
+            Hitting = false;
+        }
         HpUpdate();
     }
 
@@ -204,7 +210,7 @@ public class Employee : MonoBehaviour
         Vector3 _hpBarPos =
             Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-1.5f,transform.position.y+1.5f,0));
             hpBar.position = _hpBarPos;
-            HpFill.fillAmount = Hp*0.01f ;
+            HpFill.fillAmount = Hp*0.01f;
     }
 
     public void SetRandomStats()
@@ -247,4 +253,12 @@ public class Employee : MonoBehaviour
         Debug.Log("Decreased Hp: " + Hp);
     }
 
+    IEnumerator HitAnimation()
+    {
+        
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+    }
 }
