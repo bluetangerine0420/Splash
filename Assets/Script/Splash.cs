@@ -46,15 +46,7 @@ public class Splash : MonoBehaviour
             
     }
 
-    //public void Attack()
-    //{
-    //    if (AttackReady && Max_Atk_Spd < Cur_Atk_Spd)
-    //    {
-    //        //attack code
-    //        Cur_Atk_Spd = 0;
-    //    }
-    //    else Cur_Atk_Spd += Time.deltaTime;
-    //}
+
 
     public void Move()
     {
