@@ -254,7 +254,7 @@ public class Employee : MonoBehaviour
 
     public void DecreaseHp(float amount)
     {
-        Hp -= (int)amount;
+        Hp -= amount;
         Debug.Log("Decreased Hp: " + Hp);
     }
 

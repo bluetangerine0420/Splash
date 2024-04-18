@@ -34,11 +34,13 @@ public class Splash : MonoBehaviour
     public Collider2D AttackRange;
 
     public SpriteRenderer splashRenderer;
+
+    
     
 
     private void Start()
     {
-        
+     
     }
     private void Update()
     {
@@ -81,7 +83,15 @@ public class Splash : MonoBehaviour
         if (collider.gameObject.tag == "Employee")
         {
             AttackReady = true;
+            Employee[] employees = FindObjectsOfType<Employee>();
+            for (int i = 0; i < employees.Length; i++)
+            {
+                if (collider.gameObject == employees[i])
+                    employees[i].DecreaseHp(5f);
+            }
         }
+           
+        
     }
 
     public void OnTriggerExit2D(Collider2D collider)

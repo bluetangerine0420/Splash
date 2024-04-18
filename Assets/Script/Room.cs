@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.Rendering.Universal;
 
 public class Room : MonoBehaviour
 {
-
+    public Light2D globalLight;
     public int Floor;
     public int Room_Num;
 
@@ -29,9 +31,9 @@ public class Room : MonoBehaviour
     public float Work_Spd;
 
     public bool isCrotch = false;
-   
+    private Color darkColor = new Color(1f / 255f, 1f / 255f, 1f / 255f);
 
-    
+
     Animator animator;
     void Awake()
     {
@@ -113,7 +115,7 @@ public class Room : MonoBehaviour
                 case "Whale": Instantiate(Splashes[2], transform); break;
                 case "Eel": Instantiate(Splashes[3], transform); break;
                 case "Shark": Instantiate(Splashes[4], transform); break;
-                case "Crotch": Instantiate(Splashes[5], transform); break;
+                case "Crotch": Instantiate(Splashes[5], transform); globalLight.color = darkColor; break;
             }
             
             CareSplash = null;

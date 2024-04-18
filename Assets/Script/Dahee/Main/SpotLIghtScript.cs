@@ -16,22 +16,26 @@ public class SpotLightScript : MonoBehaviour
 
     void Update()
     {
+        crotch = FindObjectOfType<Crotch>();
         UpdateLightColor();
     }
 
     void UpdateLightColor()
     {
       
-
-        if (crotch.Escape)
+        if(crotch != null)
         {
-            spotLight.color = lightColor;
-            Vector3 crotchPosition = crotch.transform.position;
-            transform.position = new Vector3(crotchPosition.x, crotchPosition.y, transform.position.z);
+            if (crotch.Escape)
+            {
+                spotLight.color = lightColor;
+                Vector3 crotchPosition = crotch.transform.position;
+                transform.position = new Vector3(crotchPosition.x, crotchPosition.y, transform.position.z);
+            }
+            else
+            {
+                spotLight.color = darkColor;
+            }
         }
-        else
-        {
-            spotLight.color = darkColor;
-        }
+        
     }
 }
