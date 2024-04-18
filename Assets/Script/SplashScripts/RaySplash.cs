@@ -7,11 +7,12 @@ public class Raysplash : Splash
     private bool isAngel = false;
     private bool wasEscape = false;
     public Animator animator;
+   
 
     void Start()
     {
         animator.SetBool("Escape", false);
-
+   
     }
 
     void Update()
@@ -43,6 +44,19 @@ public class Raysplash : Splash
             CancelInvoke("BecomeDevil");
 
         }
+
+        if (AttackReady)
+        {
+            animator.SetBool("isAttack", true);
+
+        }
+
+        if (!AttackReady)
+        {
+            animator.SetBool("isAttack", false);
+        }
+
+        
     }
 
     void FixedUpdate()

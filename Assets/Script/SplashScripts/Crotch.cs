@@ -7,6 +7,7 @@ public class Crotch : Splash
     public Animator animator;
     void Start()
     {
+        Escape = false;
         animator.SetBool("Escape", false);
     }
 
@@ -27,6 +28,17 @@ public class Crotch : Splash
         if (!Escape)
         {
             animator.SetBool("Escape", false);
+        }
+
+        if (AttackReady)
+        {
+            animator.SetBool("isAttack", true);
+
+        }
+
+        if (!AttackReady)
+        {
+            animator.SetBool("isAttack", false);
         }
     }
 

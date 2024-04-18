@@ -50,6 +50,7 @@ public class Eel : Splash
             animator.SetBool("isAttack", true);
            
         }
+
         if(!AttackReady)
         {
             animator.SetBool("isAttack", false);
@@ -100,10 +101,5 @@ public class Eel : Splash
     }
 
 
-    IEnumerator AttackCoroutine()
-    {
-        yield return new WaitForSeconds(2.0f);
-       
-    }
 
 }

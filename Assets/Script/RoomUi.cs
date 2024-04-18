@@ -29,7 +29,7 @@ public class RoomUi : MonoBehaviour
                     case "Whale": RoomsSplash[i].sprite = SplashImages[2]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
                     case "Eel": RoomsSplash[i].sprite = SplashImages[3]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
                     case "Shark": RoomsSplash[i].sprite = SplashImages[4]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
-                    case "Q": RoomsSplash[i].sprite = SplashImages[5]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
+                    case "Crotch": RoomsSplash[i].sprite = SplashImages[5]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
                     default: RoomsSplash[i].sprite = SplashImages[6]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
                 }
             }

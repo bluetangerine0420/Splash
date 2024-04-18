@@ -22,10 +22,13 @@ public class Room : MonoBehaviour
     [SerializeField]bool[] whatSplash;
     [SerializeField] GameObject[] Splashes;
     public Vector3 RoomPosition;
+    GlobalLightScript GlobalLightScript;
 
     public float Work_Time;
     public float Work_percent;
     public float Work_Spd;
+
+    public bool isCrotch = false;
    
 
     
@@ -37,13 +40,14 @@ public class Room : MonoBehaviour
     }
     void Start()
     {
-
+        
     }
     void Update()
     {
         RoomUpdate();
         Grow();
         Escape();
+        
     }
 
     void RoomUpdate()
@@ -118,6 +122,10 @@ public class Room : MonoBehaviour
                 whatSplash[i]=false;
             }
             animator.SetInteger("CageSet", 0);
+        }
+        else
+        {
+            isCrotch = false;   
         }
     }
 

@@ -25,6 +25,17 @@ public class Shark : Splash
         {
             animator.SetBool("Escape", false);
         }
+
+        if (AttackReady)
+        {
+            animator.SetBool("isAttack", true);
+
+        }
+
+        if (!AttackReady)
+        {
+            animator.SetBool("isAttack", false);
+        }
     }
 
     void FixedUpdate()
