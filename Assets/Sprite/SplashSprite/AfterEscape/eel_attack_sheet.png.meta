@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21de2f66010eec54baf6e20b105bdd8f
+guid: 401e62982cd40e94c9f756eed60852bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crotch_idle_sheet_0
+      name: eel_attack_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37399216de12e446a9d95f8b0ef2356
+      internalID: 549949084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eel_attack_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9df0e86aaf8aa4fb6443e521a417bf
+      internalID: -769880799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eel_attack_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13820ba9e219c9b4d921dbff5d25ebbc
+      internalID: 53431415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eel_attack_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a497aab462980974ea06b55914a4a1e5
+      internalID: -934510925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eel_attack_sheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 64
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcf034a5a4105147b2aa3fe1376c95f
-      internalID: 246886034
+      spriteID: 8c5fe5ac6f61b3c40a6ba9c931939af5
+      internalID: 1283281597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_1
+      name: eel_attack_sheet_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 80
-        height: 64
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f6db14961aefc047bac5e0a7a5a2dfa
-      internalID: 760027679
+      spriteID: 6adc94da5be1e874d95f14c627b3a859
+      internalID: -637704600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_2
+      name: eel_attack_sheet_6
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
-        width: 80
-        height: 64
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01d8c5182b466745a90e0308fa59a0b
-      internalID: 447956670
+      spriteID: 9fa611e29ee2db34c8c42cab90f92f6b
+      internalID: -1304210535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_3
+      name: eel_attack_sheet_7
       rect:
         serializedVersion: 2
-        x: 240
+        x: 288
         y: 0
-        width: 80
-        height: 64
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc2cbbe176efce42b48495e12a7b98c
-      internalID: 253788858
+      spriteID: 21c423b967a88584f9edf477d1ab0a2c
+      internalID: 365497418
       vertices: []
       indices: 
       edges: []
@@ -217,10 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crotch_idle_sheet_0: 246886034
-      crotch_idle_sheet_1: 760027679
-      crotch_idle_sheet_2: 447956670
-      crotch_idle_sheet_3: 253788858
+      eel_attack_sheet_0: 549949084
+      eel_attack_sheet_1: -769880799
+      eel_attack_sheet_2: 53431415
+      eel_attack_sheet_3: -934510925
+      eel_attack_sheet_4: 1283281597
+      eel_attack_sheet_5: -637704600
+      eel_attack_sheet_6: -1304210535
+      eel_attack_sheet_7: 365497418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

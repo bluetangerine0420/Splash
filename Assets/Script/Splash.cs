@@ -34,11 +34,11 @@ public class Splash : MonoBehaviour
     public Collider2D AttackRange;
 
     public SpriteRenderer splashRenderer;
-    Room room;
+    
 
     private void Start()
     {
-        room = GetComponent<Room>();
+        
     }
     private void Update()
     {
@@ -46,15 +46,15 @@ public class Splash : MonoBehaviour
             
     }
 
-    public void Attack()
-    {
-        if (AttackReady && Max_Atk_Spd < Cur_Atk_Spd)
-        {
-            //attack code
-            Cur_Atk_Spd = 0;
-        }
-        else Cur_Atk_Spd += Time.deltaTime;
-    }
+    //public void Attack()
+    //{
+    //    if (AttackReady && Max_Atk_Spd < Cur_Atk_Spd)
+    //    {
+    //        //attack code
+    //        Cur_Atk_Spd = 0;
+    //    }
+    //    else Cur_Atk_Spd += Time.deltaTime;
+    //}
 
     public void Move()
     {

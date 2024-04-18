@@ -24,13 +24,13 @@ public class RoomUi : MonoBehaviour
             if (Rooms[i].CareSplash!=null)
             {
                 switch (Rooms[i].CareSplash.Name) {
-                    case "Ray": RoomsSplash[i].sprite = SplashImages[0]; Rooms[i].CareSplash.Escape = true; break;
-                    case "StarFish": RoomsSplash[i].sprite = SplashImages[1]; Rooms[i].CareSplash.Escape = true; break;
-                    case "Whale": RoomsSplash[i].sprite = SplashImages[2]; Rooms[i].CareSplash.Escape = true; break;
-                    case "Eel": RoomsSplash[i].sprite = SplashImages[3]; Rooms[i].CareSplash.Escape = true; break;
-                    case "Shark": RoomsSplash[i].sprite = SplashImages[4]; Rooms[i].CareSplash.Escape = true; break;
-                    case "Q": RoomsSplash[i].sprite = SplashImages[5]; Rooms[i].CareSplash.Escape = true; break;
-                    default: RoomsSplash[i].sprite = SplashImages[6]; Rooms[i].CareSplash.Escape = true; break;
+                    case "Ray": RoomsSplash[i].sprite = SplashImages[0]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
+                    case "StarFish": RoomsSplash[i].sprite = SplashImages[1]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
+                    case "Whale": RoomsSplash[i].sprite = SplashImages[2]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
+                    case "Eel": RoomsSplash[i].sprite = SplashImages[3]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
+                    case "Shark": RoomsSplash[i].sprite = SplashImages[4]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
+                    case "Q": RoomsSplash[i].sprite = SplashImages[5]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/ break;
+                    default: RoomsSplash[i].sprite = SplashImages[6]; Rooms[i].CareSplash.Escape = true; /*StartCoroutine(EscapeTrue(i));*/break;
                 }
             }
         }
@@ -38,7 +38,11 @@ public class RoomUi : MonoBehaviour
     }
 
 
-
+    //IEnumerator EscapeTrue(int i)
+    //{
+    //    yield return new WaitForSeconds(2.0f);
+    //    Rooms[i].CareSplash.Escape = true;
+    //}
 
     
     

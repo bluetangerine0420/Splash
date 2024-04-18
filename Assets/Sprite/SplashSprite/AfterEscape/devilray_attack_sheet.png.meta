@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21de2f66010eec54baf6e20b105bdd8f
+guid: 55c6a5c03ff1a29418a8ea59f76959cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crotch_idle_sheet_0
+      name: devilray_attack_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df850f42939f0014abd52b8b1fdd602f
+      internalID: -1309228445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fea3f18a21de94bac6b33e5852fc12
+      internalID: 931229020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8edb53c38e4df4d8f8fe6fff6f39cf
+      internalID: -450041438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439b7455c1df78343b33017fec55b938
+      internalID: -698138719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcf034a5a4105147b2aa3fe1376c95f
-      internalID: 246886034
+      spriteID: 2d74746049266dd4a875681b63c147e8
+      internalID: 2142228362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_1
+      name: devilray_attack_sheet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -158,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f6db14961aefc047bac5e0a7a5a2dfa
-      internalID: 760027679
+      spriteID: 668308fed3253a947b0a3be794211bf8
+      internalID: -1464347511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_2
+      name: devilray_attack_sheet_6
       rect:
         serializedVersion: 2
         x: 160
@@ -179,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01d8c5182b466745a90e0308fa59a0b
-      internalID: 447956670
+      spriteID: 625be8deb0575954c8beca096a31d14e
+      internalID: -1942833681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crotch_idle_sheet_3
+      name: devilray_attack_sheet_7
       rect:
         serializedVersion: 2
         x: 240
@@ -200,8 +284,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc2cbbe176efce42b48495e12a7b98c
-      internalID: 253788858
+      spriteID: 2c98fb9ee15fe8548aaf0733de1efd27
+      internalID: -220339647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd405d33fab1134194a58b374f267a3
+      internalID: 1011451068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d30edd482734984084384f612ba81e0
+      internalID: -680135059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilray_attack_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e560f0212cc61146bd5a3b9a520c2c8
+      internalID: 55861853
       vertices: []
       indices: 
       edges: []
@@ -217,10 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crotch_idle_sheet_0: 246886034
-      crotch_idle_sheet_1: 760027679
-      crotch_idle_sheet_2: 447956670
-      crotch_idle_sheet_3: 253788858
+      devilray_attack_sheet_0: -1309228445
+      devilray_attack_sheet_1: 931229020
+      devilray_attack_sheet_10: 55861853
+      devilray_attack_sheet_2: -450041438
+      devilray_attack_sheet_3: -698138719
+      devilray_attack_sheet_4: 2142228362
+      devilray_attack_sheet_5: -1464347511
+      devilray_attack_sheet_6: -1942833681
+      devilray_attack_sheet_7: -220339647
+      devilray_attack_sheet_8: 1011451068
+      devilray_attack_sheet_9: -680135059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
