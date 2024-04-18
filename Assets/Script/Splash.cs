@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Splash : MonoBehaviour
@@ -33,10 +34,16 @@ public class Splash : MonoBehaviour
     public Collider2D AttackRange;
 
     public SpriteRenderer splashRenderer;
+    Room room;
 
+    private void Start()
+    {
+        room = GetComponent<Room>();
+    }
     private void Update()
     {
-        
+   
+            
     }
 
     public void Attack()
@@ -92,4 +99,7 @@ public class Splash : MonoBehaviour
             AttackReady = false;
         }
     }
+
+
+
 }

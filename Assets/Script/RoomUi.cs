@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RoomUi : MonoBehaviour
 {
-    [SerializeField] Room[] Rooms;
+    public Room[] Rooms;
     [SerializeField] Slider[] EscapeSlider;
     [SerializeField] Slider[] GrowSlider;
     [SerializeField] Sprite[] SplashImages;
@@ -24,18 +24,21 @@ public class RoomUi : MonoBehaviour
             if (Rooms[i].CareSplash!=null)
             {
                 switch (Rooms[i].CareSplash.Name) {
-                    case "Ray": RoomsSplash[i].sprite = SplashImages[0]; break;
-                    case "StarFish": RoomsSplash[i].sprite = SplashImages[1]; break;
-                    case "Whale": RoomsSplash[i].sprite = SplashImages[2]; break;
-                    case "Eel": RoomsSplash[i].sprite = SplashImages[3]; break;
-                    case "Shark": RoomsSplash[i].sprite = SplashImages[4]; break;
-                    case "Q": RoomsSplash[i].sprite = SplashImages[5]; break;
-                    default: RoomsSplash[i].sprite = SplashImages[6]; break;
+                    case "Ray": RoomsSplash[i].sprite = SplashImages[0]; Rooms[i].CareSplash.Escape = true; break;
+                    case "StarFish": RoomsSplash[i].sprite = SplashImages[1]; Rooms[i].CareSplash.Escape = true; break;
+                    case "Whale": RoomsSplash[i].sprite = SplashImages[2]; Rooms[i].CareSplash.Escape = true; break;
+                    case "Eel": RoomsSplash[i].sprite = SplashImages[3]; Rooms[i].CareSplash.Escape = true; break;
+                    case "Shark": RoomsSplash[i].sprite = SplashImages[4]; Rooms[i].CareSplash.Escape = true; break;
+                    case "Q": RoomsSplash[i].sprite = SplashImages[5]; Rooms[i].CareSplash.Escape = true; break;
+                    default: RoomsSplash[i].sprite = SplashImages[6]; Rooms[i].CareSplash.Escape = true; break;
                 }
             }
         }
 
     }
+
+
+
 
     
     
