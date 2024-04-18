@@ -47,8 +47,11 @@ public class Employee : MonoBehaviour
     [SerializeField] GameObject[] RoomsPos;
     [SerializeField] GameObject[] FloorPos;
 
-    [SerializeField] GameObject prfHpBar;
+    [SerializeField] GameObject prfhpBar;
+    [SerializeField] Image HpFill;
     [SerializeField] GameObject Canvas;
+
+    RectTransform hpBar;
 
     Item[] Item_list = new Item[3];
 
@@ -56,6 +59,8 @@ public class Employee : MonoBehaviour
     {
         Mental = 100;
         Hp = 100;
+        hpBar =Instantiate(prfhpBar,Canvas.transform).GetComponent<RectTransform>();
+        HpFill = hpBar.transform.GetChild(0).GetComponent<Image>();
     }
 
     void Update()
@@ -196,8 +201,10 @@ public class Employee : MonoBehaviour
 
     void HpUpdate()
     {
-        
-    
+        Vector3 _hpBarPos =
+            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x-1.5f,transform.position.y+1.5f,0));
+            hpBar.position = _hpBarPos;
+            HpFill.fillAmount = Hp*0.01f ;
     }
 
     public void SetRandomStats()
