@@ -26,6 +26,7 @@ public class Room : MonoBehaviour
     public float Work_Time;
     public float Work_percent;
     public float Work_Spd;
+   
 
     
     Animator animator;
@@ -90,6 +91,7 @@ public class Room : MonoBehaviour
 
     void Escape()
     {
+       
         if (CareSplash != null)
         {
             Escape_Value += Time.deltaTime * Escape_Power;
@@ -109,6 +111,7 @@ public class Room : MonoBehaviour
                 case "Shark": Instantiate(Splashes[4], transform); break;
                 case "Crotch": Instantiate(Splashes[5], transform); break;
             }
+            
             CareSplash = null;
             for(int i = 0; i < Splashes.Length; i++)
             {
@@ -117,4 +120,6 @@ public class Room : MonoBehaviour
             animator.SetInteger("CageSet", 0);
         }
     }
+
+
 }
