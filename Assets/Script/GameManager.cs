@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         RoomCheck();
         ClearCheck();
-        //if (Employees[0].Hp <= 0 && Employees[1].Hp <= 0 && Employees[2].Hp <= 0) SceneManager.LoadScene("GameOver");//game Over
+        if (Employees[0].Hp <= 0 && Employees[1].Hp <= 0 && Employees[2].Hp <= 0) SceneManager.LoadScene("GameOver");//game Over
     }
 
     void RoomCheck()

@@ -4035,7 +4035,7 @@ PrefabInstance:
     - target: {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
       propertyPath: HpFill
       value: 
-      objectReference: {fileID: 3867162263500833565, guid: 799997ac790ba78418723ef8eaf97269, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
       propertyPath: Max_Care
       value: 45
@@ -4181,7 +4181,7 @@ PrefabInstance:
     - target: {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
       propertyPath: HpFill
       value: 
-      objectReference: {fileID: 3867162263500833565, guid: 799997ac790ba78418723ef8eaf97269, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
       propertyPath: Max_Care
       value: 45
@@ -6312,7 +6312,10 @@ MonoBehaviour:
   - {fileID: 1901722758}
   - {fileID: 655488532}
   - {fileID: 2134682501}
-  Employees: []
+  Employees:
+  - {fileID: 1604825625}
+  - {fileID: 633444674}
+  - {fileID: 194545829}
   ClearSplash: 0
   GoalSplash: 5
   a: {fileID: 426245917}
@@ -13294,7 +13297,7 @@ PrefabInstance:
     - target: {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
       propertyPath: HpFill
       value: 
-      objectReference: {fileID: 3867162263500833565, guid: 799997ac790ba78418723ef8eaf97269, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
       propertyPath: Max_Care
       value: 45

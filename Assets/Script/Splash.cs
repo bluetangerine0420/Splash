@@ -19,14 +19,16 @@ public class Splash : MonoBehaviour
     public float Move_Max_Time;
     public float Move_Cur_Time;
 
-
-    public float Death_Value;
-
     public bool Escape = false;
     public float Escape_Value;
 
     public float Grow_Value;
     public int Grow;
+    
+    public float Cur_Death_Value;
+    public float Max_Death_Value;
+    public float Death_Value;
+   
 
     public Employee[] Employees;
 
@@ -44,8 +46,12 @@ public class Splash : MonoBehaviour
     }
     private void Update()
     {
-   
-            
+
+        if (Cur_Death_Value > Max_Death_Value)
+        {
+            Destroy(gameObject);
+        }
+        else { Cur_Death_Value += Time.deltaTime * Death_Value; }
     }
 
 
