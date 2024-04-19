@@ -208,7 +208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -4268,6 +4268,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 629132656671635965, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
   m_PrefabInstance: {fileID: 194545826}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &194545829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
+  m_PrefabInstance: {fileID: 194545826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &212908032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,17 +4975,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239554331}
   m_CullTransparentMesh: 1
---- !u!114 &244702467 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
-  m_PrefabInstance: {fileID: 190604875}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!213 &252964903
 Sprite:
   m_ObjectHideFlags: 0
@@ -5438,7 +5438,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -5573,7 +5573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -8909,7 +8909,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -10902,6 +10902,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9580116, y: 1.942431}
   m_EdgeRadius: 0
+--- !u!114 &633444674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
+  m_PrefabInstance: {fileID: 190604875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &646369027
 GameObject:
   m_ObjectHideFlags: 0
@@ -11877,7 +11888,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -14084,7 +14095,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -15196,7 +15207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -15487,7 +15498,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -15537,17 +15548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889990254}
   m_CullTransparentMesh: 1
---- !u!114 &893093936 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
-  m_PrefabInstance: {fileID: 752597515}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &900817681
 GameObject:
   m_ObjectHideFlags: 0
@@ -15633,7 +15633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -16230,7 +16230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -19747,7 +19747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -20853,7 +20853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -21071,17 +21071,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1285888035 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
-  m_PrefabInstance: {fileID: 194545826}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1301020369
 GameObject:
   m_ObjectHideFlags: 0
@@ -22080,7 +22069,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -23320,7 +23309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -44827,7 +44816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -44877,6 +44866,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604029640}
   m_CullTransparentMesh: 1
+--- !u!114 &1604825625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
+  m_PrefabInstance: {fileID: 752597515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612347046
 GameObject:
   m_ObjectHideFlags: 0
@@ -46111,7 +46111,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -46637,7 +46637,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -60102,7 +60102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -60741,7 +60741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -62036,7 +62036,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244702467}
+      - m_Target: {fileID: 633444674}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -62863,7 +62863,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -63170,7 +63170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -63339,7 +63339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -64777,7 +64777,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -64992,7 +64992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285888035}
+      - m_Target: {fileID: 194545829}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -65617,7 +65617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893093936}
+      - m_Target: {fileID: 1604825625}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2

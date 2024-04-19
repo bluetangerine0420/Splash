@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -1915,6 +1915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 1
   Room_Num: 2
   Ui: {fileID: 1598473738}
@@ -1943,6 +1944,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &173674582
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,7 +2772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -16759,7 +16761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -17320,6 +17322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 3
   Room_Num: 9
   Ui: {fileID: 883628137}
@@ -17348,6 +17351,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!212 &340689229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17525,6 +17529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 3
   Room_Num: 7
   Ui: {fileID: 1788266431}
@@ -17553,6 +17558,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &346204550
 Transform:
   m_ObjectHideFlags: 0
@@ -20775,7 +20781,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -20949,22 +20955,12 @@ PrefabInstance:
       propertyPath: RoomsPos.Array.data[8]
       value: 
       objectReference: {fileID: 340689225}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
---- !u!114 &532276630 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6384775424309914801, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
-  m_PrefabInstance: {fileID: 532276629}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &532276631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6065628427586696072, guid: bf715d7359c5259419e0a96858da6b44, type: 3}
@@ -21850,7 +21846,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -22420,7 +22416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -23106,7 +23102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -24023,7 +24019,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -25852,7 +25848,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -26385,7 +26381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -27240,6 +27236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 2
   Room_Num: 5
   Ui: {fileID: 224485340}
@@ -27268,6 +27265,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &933131507
 Transform:
   m_ObjectHideFlags: 0
@@ -27870,7 +27868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -28824,7 +28822,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -29076,7 +29074,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -30139,22 +30137,12 @@ PrefabInstance:
       propertyPath: RoomsPos.Array.data[8]
       value: 
       objectReference: {fileID: 340689225}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
---- !u!114 &1141803986 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7716024580070664778, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
-  m_PrefabInstance: {fileID: 1141803985}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1141803987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3574110472404872275, guid: fa713eec08e7c7a4f9c62020c4f56ee6, type: 3}
@@ -30470,7 +30458,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -31457,7 +31445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -32204,7 +32192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -33007,6 +32995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 1
   Room_Num: 1
   Ui: {fileID: 1482620289}
@@ -33035,6 +33024,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &1311228948
 Transform:
   m_ObjectHideFlags: 0
@@ -34402,7 +34392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -34973,7 +34963,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -35131,6 +35121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 1
   Room_Num: 3
   Ui: {fileID: 933638972}
@@ -35159,6 +35150,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!95 &1448272489
 Animator:
   serializedVersion: 5
@@ -55188,6 +55180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 2
   Room_Num: 4
   Ui: {fileID: 1800514262}
@@ -55216,6 +55209,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &1472044959
 Transform:
   m_ObjectHideFlags: 0
@@ -55744,7 +55738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -57059,7 +57053,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -58531,7 +58525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -58898,6 +58892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 2
   Room_Num: 6
   Ui: {fileID: 1636905785}
@@ -58926,6 +58921,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!95 &1760990279
 Animator:
   serializedVersion: 5
@@ -59144,7 +59140,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532276630}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -60119,7 +60115,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Employee3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -60129,17 +60126,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 629132656671635965, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
   m_PrefabInstance: {fileID: 1812113845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1812113847 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1168249282153963660, guid: 1f7c9f01b3b96704199fff45b09e3db0, type: 3}
-  m_PrefabInstance: {fileID: 1812113845}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe889c830fc2c6442bd41609b3e737de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1827608415
 GameObject:
   m_ObjectHideFlags: 0
@@ -60473,7 +60459,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -61710,7 +61696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -62557,6 +62543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6ddbfcbad9f4c4986b4b500348f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
   Floor: 3
   Room_Num: 8
   Ui: {fileID: 1916965524}
@@ -62585,6 +62572,7 @@ MonoBehaviour:
   Work_Time: 0
   Work_percent: 0
   Work_Spd: 0
+  isCrotch: 0
 --- !u!4 &1978840611
 Transform:
   m_ObjectHideFlags: 0
@@ -63319,7 +63307,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812113847}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2
@@ -64083,7 +64071,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141803986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Employee, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 2

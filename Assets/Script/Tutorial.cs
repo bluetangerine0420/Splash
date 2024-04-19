@@ -20,7 +20,7 @@ public class Tutorial : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            if (count == 10) SceneManager.LoadScene(2);
+            if (count == 10) SceneManager.LoadScene("PlayTutorial");
             TutoPage[count - 1].SetActive(false);
             if (count-1 == 3) Uies[0].SetActive(false);
             if (count-1 == 5) Uies[1].SetActive(false);

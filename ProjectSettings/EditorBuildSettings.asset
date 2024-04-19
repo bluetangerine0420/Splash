@@ -21,9 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/InfoTutorial.unity
     guid: 7a68deb62624b37438d29bc4d9007baa
   - enabled: 1
+    path: Assets/Scenes/PlayTutorial.unity
+    guid: bedabb142aeb0144dba1713e25bede69
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: db8e256a8594e7148a194e547344a2dc
   - enabled: 1
     path: Assets/Scenes/ClearScene.unity
     guid: 58dda9d9e04c2fa4f91e20e46d3d957b
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: eec046fbf1df6df429db565e4f55029d
   m_configObjects: {}
