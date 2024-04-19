@@ -13091,7 +13091,7 @@ GameObject:
   - component: {fileID: 736161976}
   - component: {fileID: 736161975}
   m_Layer: 0
-  m_Name: 'Global Light 2D '
+  m_Name: 'GlobalLight2D '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15022,7 +15022,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spotLight: {fileID: 852794680}
+  gLight: {fileID: 0}
   crotch: {fileID: 0}
+  globalLight: {fileID: 0}
 --- !u!114 &852794680
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,9 @@ using UnityEngine.Rendering.Universal;
 public class SpotLightScript : MonoBehaviour
 {
     public Light2D spotLight;
+   
     public GameObject crotch;
+  
 
     private Color darkColor = Color.black;
     private Color lightColor = Color.white;
@@ -12,6 +14,8 @@ public class SpotLightScript : MonoBehaviour
     void Start()
     {
         UpdateLightColor();
+       
+       
     }
 
     void Update()
@@ -19,10 +23,11 @@ public class SpotLightScript : MonoBehaviour
         if (crotch == null)
         {
             crotch = GameObject.Find("Crotch(Clone)");
-     
-            
+
             if (crotch == null)
-                return;
+                spotLight.color = darkColor;
+            
+            return;
         }
 
         UpdateLightPosition();
