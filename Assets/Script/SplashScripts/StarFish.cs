@@ -15,6 +15,9 @@ public class Starfish : Splash
     void Start()
     {
         animator.SetBool("Escape", false);
+        Cur_Death_Value = 0;
+        Max_Death_Value = 100;
+        Death_Value = 5;
     }
 
     void Update()
@@ -48,6 +51,12 @@ public class Starfish : Splash
         {
             animator.SetBool("isAttack", false);
         }
+
+        if (Cur_Death_Value > Max_Death_Value)
+        {
+            Destroy(gameObject);
+        }
+        else { Cur_Death_Value += Time.deltaTime * Death_Value; }
     }
 
     void FixedUpdate()
